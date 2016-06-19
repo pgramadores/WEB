@@ -28,8 +28,8 @@ div.bbp-template-notice.info p,
 .mini-widget .post:hover a,
 .post-review:hover h3 a,
 .widget-title hr:before {
-    background-color: #000 !important;
-    border-color: #000 !important;
+    background-color: #0288d1 !important;
+    border-color: #0288d1 !important;
     color: #ffffff !important;
 }
 
