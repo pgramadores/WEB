@@ -403,7 +403,7 @@ p.dropcaps::first-letter {
     margin-right: 20px;
     margin-bottom: 0;
     text-align: center;
-    background-color: #343840;
+    background-color: #000;
     position: relative;
 }
 
@@ -417,7 +417,7 @@ p.dropcaps::first-letter {
     position: absolute;
     pointer-events: none;
     border-color: rgba(18, 18, 18, 0);
-    border-left-color: #343840;
+    border-left-color: #000;
     border-width: 7px;
     margin-top: -7px;
 }
