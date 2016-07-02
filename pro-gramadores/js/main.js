@@ -11,11 +11,11 @@ angularRoutingApp.config(function($routeProvider) {
 		})
 		.when('/trabajos', {
 			templateUrl : 'views/trabajos.html',
-			controller 	: 'aboutController'
+			controller 	: 'TrabajoController'
 		})
         .when('/contacto/', {
             templateUrl : 'views/contacto.html',
-            controller  : 'contactController'
+            controller  : 'ContactoController'
         })
 		.otherwise({
 			redirectTo: '/'
@@ -23,23 +23,9 @@ angularRoutingApp.config(function($routeProvider) {
 });
 
 
-angularRoutingApp.controller('mainController', function($scope) {
-	$scope.message = 'Hola, Mundo!';
-    $scope.initTickerMe = function () {
-        $(function () {
-        // wait till load event fires so all resources are available
-            $scope.$tickerme = $('#ticker').tickerme();
-        });
-    };
-          
-    $scope.initTickerMe();
-});
 
-angularRoutingApp.controller('aboutController', function($scope) {
-	$scope.message = 'Esta es la página "Acerca de"';
-});
 
-angularRoutingApp.controller('contactController', function($scope, $routeParams) {
+angularRoutingApp.controller('ContactoController', function($scope, $routeParams) {
 	$scope.message = 'Esta es la página de "Contacto", aquí podemos poner un formulario';
     $scope.Usuario = $routeParams.Usuario;
     $scope.Nombre = $routeParams.Nombre;
