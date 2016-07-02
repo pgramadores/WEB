@@ -13,10 +13,10 @@ angularRoutingApp.config(function($routeProvider) {
 			templateUrl : 'views/trabajos.html',
 			controller 	: 'aboutController'
 		})
-		.when('/contacto/:Usuario?/:Nombre?', {
-			templateUrl : 'pages/contacto.html',
-			controller 	: 'contactController'
-		})
+        .when('/contacto/', {
+            templateUrl : 'views/contacto.html',
+            controller  : 'contactController'
+        })
 		.otherwise({
 			redirectTo: '/'
 		});
