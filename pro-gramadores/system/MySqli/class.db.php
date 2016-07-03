@@ -1,6 +1,6 @@
 <?php
 
-include_once 'class.constantes.php';
+include 'Configuracion.php';
 
 class Database{
     
