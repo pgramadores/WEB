@@ -17,8 +17,12 @@ angularRoutingApp.config(function($routeProvider) {
             templateUrl : 'views/contacto.html',
             controller  : 'ContactoController'
         })
+        .when('/error/',{
+            templateUrl : 'views/404.html',
+            controller  : 'error' 
+        })
 		.otherwise({
-			redirectTo: '/'
+			redirectTo: 'error'
 		});
 });
 
