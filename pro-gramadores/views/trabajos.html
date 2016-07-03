@@ -1,7 +1,6 @@
-            <div class="row">
+                <div class="row">
                 <div class="col-md-9 col-sm-12 col-xs-12 m22">
-                    <div class="widget searchwidget joblist">
-
+                    <div class="widget searchwidget joblist" ng-repeat="key in filteredTodos">
                         <div class="large-widget m30">
                             <div class="post row clearfix">
                                 <div class="col-md-4">
@@ -9,7 +8,8 @@
                                         <a href="single.html">
                                             <img alt="" src="upload/job.jpg" class="img-responsive">
                                         </a>
-                                        <a href="#appljpob" class="btn btn-primary btn-block"><i class="fa fa-check"></i> Apply Job</a> 
+                                        <a href="javascript:void(0);" ng-click="Postular(key.idTrabajos,$event)" class="btn btn-primary btn-block" >
+                                            <i class="fa fa-check"></i> Postular</a> 
                                     </div>
                                 </div>
 
@@ -18,143 +18,15 @@
                                         <div class="colorfulcats">
                                             <a href="#"><span class="label label-primary">Full time</span></a>
                                         </div>
-                                        <a href="single-job.html"><h3>We are looking a team member (In Office)</h3></a>
+                                        <a href="single-job.html">{{key.Cargo}}</h3></a>
 
                                         <div class="job-details">
                                             <ul class="">
-                                                <li><strong><i class="fa fa-user"></i> Publisher :</strong> <a href="#"> John DOE</a></li>
-                                                <li><strong><i class="fa fa-briefcase"></i> Job Category :</strong> <a href="#"> Web Design</a></li>
-                                                <li><strong><i class="fa fa-dollar"></i> Job Price :</strong> $21.00 - $120.00</li>
-                                                <li><strong><i class="fa fa-clock-o"></i> Delivery Time :</strong> 5 Days</li>
-                                                <li><strong><i class="fa fa-cog"></i> Revision :</strong> 3 Times</li>
-                                            </ul>
-                                        </div>
-                                    </div><!-- /.pull-right -->
-                                </div>
-                            </div><!-- end post -->
-                        </div><!-- end large-widget -->
-
-                        <div class="large-widget m30">
-                            <div class="post row clearfix">
-                                <div class="col-md-4">
-                                    <div class="post-media">
-                                        <a href="single.html">
-                                            <img alt="" src="upload/job_01.jpg" class="img-responsive">
-                                        </a>
-                                        <a href="#appljpob" class="btn btn-primary btn-block"><i class="fa fa-check"></i> Apply Job</a> 
-                                    </div>
-                                </div>
-
-                                <div class="col-md-8">
-                                    <div class="title-area">
-                                        <div class="colorfulcats">
-                                            <a href="#"><span class="label label-info">Freelancer</span></a>
-                                        </div>
-                                        <a href="single-job.html"><h3>Anybody build my email subscribe form With Mailchimp email service?</h3></a>
-
-                                        <div class="job-details">
-                                            <ul class="">
-                                                <li><strong><i class="fa fa-user"></i> Publisher :</strong> <a href="#"> Mark SANDERS</a></li>
-                                                <li><strong><i class="fa fa-briefcase"></i> Job Category :</strong> <a href="#"> Email Marketing</a></li>
-                                                <li><strong><i class="fa fa-dollar"></i> Job Price :</strong> $10.00 - $21.00</li>
-                                                <li><strong><i class="fa fa-clock-o"></i> Delivery Time :</strong> 1 Days</li>
-                                                <li><strong><i class="fa fa-cog"></i> Revision :</strong> 1 Times</li>
-                                            </ul>
-                                        </div>
-                                    </div><!-- /.pull-right -->
-                                </div>
-                            </div><!-- end post -->
-                        </div><!-- end large-widget -->
-
-                        <div class="large-widget m30">
-                            <div class="post row clearfix">
-                                <div class="col-md-4">
-                                    <div class="post-media">
-                                        <a href="single.html">
-                                            <img alt="" src="upload/job_02.jpg" class="img-responsive">
-                                        </a>
-                                        <a href="#appljpob" class="btn btn-primary btn-block"><i class="fa fa-check"></i> Apply Job</a> 
-                                    </div>
-                                </div>
-
-                                <div class="col-md-8">
-                                    <div class="title-area">
-                                        <div class="colorfulcats">
-                                            <a href="#"><span class="label label-info">Freelancer</span></a>
-                                        </div>
-                                        <a href="single-job.html"><h3>Looking professional logo designer, who want to design our company logo?</h3></a>
-
-                                        <div class="job-details">
-                                            <ul class="">
-                                                <li><strong><i class="fa fa-user"></i> Publisher :</strong> <a href="#"> Amly LOCKER</a></li>
-                                                <li><strong><i class="fa fa-briefcase"></i> Job Category :</strong> <a href="#"> Logo Design</a></li>
-                                                <li><strong><i class="fa fa-dollar"></i> Job Price :</strong> $44.00 - $129.00</li>
-                                                <li><strong><i class="fa fa-clock-o"></i> Delivery Time :</strong> 3 Days</li>
-                                                <li><strong><i class="fa fa-cog"></i> Revision :</strong> 4 Times</li>
-                                            </ul>
-                                        </div>
-                                    </div><!-- /.pull-right -->
-                                </div>
-                            </div><!-- end post -->
-                        </div><!-- end large-widget -->
-
-                        <div class="large-widget m30">
-                            <div class="post row clearfix">
-                                <div class="col-md-4">
-                                    <div class="post-media">
-                                        <a href="single.html">
-                                            <img alt="" src="upload/job_04.jpg" class="img-responsive">
-                                        </a>
-                                        <a href="#appljpob" class="btn btn-primary btn-block"><i class="fa fa-check"></i> Apply Job</a> 
-                                    </div>
-                                </div>
-
-                                <div class="col-md-8">
-                                    <div class="title-area">
-                                        <div class="colorfulcats">
-                                            <a href="#"><span class="label label-info">Freelancer</span></a>
-                                        </div>
-                                        <a href="single-job.html"><h3>Fix my template JavaScript problem - Its not work on Google Chrome</h3></a>
-
-                                        <div class="job-details">
-                                            <ul class="">
-                                                <li><strong><i class="fa fa-user"></i> Publisher :</strong> <a href="#"> Jenny DOE</a></li>
-                                                <li><strong><i class="fa fa-briefcase"></i> Job Category :</strong> <a href="#"> Website Design</a></li>
-                                                <li><strong><i class="fa fa-dollar"></i> Job Price :</strong> $10.00 - $20.00</li>
-                                                <li><strong><i class="fa fa-clock-o"></i> Delivery Time :</strong> 1 Days</li>
-                                                <li><strong><i class="fa fa-cog"></i> Revision :</strong> 1 Times</li>
-                                            </ul>
-                                        </div>
-                                    </div><!-- /.pull-right -->
-                                </div>
-                            </div><!-- end post -->
-                        </div><!-- end large-widget -->
-
-                        <div class="large-widget m30">
-                            <div class="post row clearfix">
-                                <div class="col-md-4">
-                                    <div class="post-media">
-                                        <a href="single.html">
-                                            <img alt="" src="upload/job_03.jpg" class="img-responsive">
-                                        </a>
-                                        <a href="#appljpob" class="btn btn-primary btn-block"><i class="fa fa-check"></i> Apply Job</a> 
-                                    </div>
-                                </div>
-
-                                <div class="col-md-8">
-                                    <div class="title-area">
-                                        <div class="colorfulcats">
-                                            <a href="#"><span class="label label-info">Freelancer</span></a>
-                                        </div>
-                                        <a href="single-job.html"><h3>Bootstrap Framewok - Convert my PSD template to Bootstrap template</h3></a>
-
-                                        <div class="job-details">
-                                            <ul class="">
-                                                <li><strong><i class="fa fa-user"></i> Publisher :</strong> <a href="#"> Amly LOCKER</a></li>
-                                                <li><strong><i class="fa fa-briefcase"></i> Job Category :</strong> <a href="#"> Website Design</a></li>
-                                                <li><strong><i class="fa fa-dollar"></i> Job Price :</strong> $344.00 - $1256.00</li>
-                                                <li><strong><i class="fa fa-clock-o"></i> Delivery Time :</strong> 12 Days</li>
-                                                <li><strong><i class="fa fa-cog"></i> Revision :</strong> 5 Times</li>
+                                                <li><strong><i class="fa fa-user"></i> Publicador :</strong> <a href="#"> {{key.Publicador}}</a></li>
+                                                <li><strong><i class="fa fa-briefcase"></i> Categoria :</strong> <a href="#"> {{key.Categoria}}</a></li>
+                                                <li><strong><i class="fa fa-dollar"></i> Sueldo aproximado :</strong> {{key.Sueldo}}</li>
+                                                <li><strong><i class="fa fa-clock-o"></i> Tipo contrato :</strong> {{key.TipoContrato}}</li>
+                                                <li><strong><i class="fa fa-cog"></i> Etapas de ingreso :</strong> {{key.NivelEntrevista}} Etapas</li>
                                             </ul>
                                         </div>
                                     </div><!-- /.pull-right -->
@@ -165,23 +37,8 @@
 
                     <div class="pagination-wrapper">
                         <nav>
-                          <ul class="pagination">
-                            <li>
-                              <a href="#" aria-label="Previous">
-                                <span aria-hidden="true">&laquo;</span>
-                              </a>
-                            </li>
-                            <li><a href="#">1</a></li>
-                            <li><a href="#">2</a></li>
-                            <li><a href="#">3</a></li>
-                            <li><a href="#">4</a></li>
-                            <li><a href="#">5</a></li>
-                            <li>
-                              <a href="#" aria-label="Next">
-                                <span aria-hidden="true">&raquo;</span>
-                              </a>
-                            </li>
-                          </ul>
+                            <div data-pagination="" data-num-pages="numPages()" data-current-page="currentPage" data-max-size="maxSize"  data-boundary-links="true">
+                            </div>
                         </nav>
                     </div>
                 </div><!-- end col -->
