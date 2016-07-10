@@ -6,21 +6,29 @@ angularRoutingApp.config(function($routeProvider) {
 
 	$routeProvider
 		.when('/', {
-			templateUrl	: 'views/index-4.html',
+			templateUrl	: 'views/index.html',
 			controller 	: 'mainController'
 		})
 		.when('/trabajos', {
 			templateUrl : 'views/trabajos.html',
 			controller 	: 'TrabajoController'
 		})
-        .when('/contacto/', {
+		.when('/detalleoferta/:Oferta?/:IdOferta?', {
+			templateUrl : 'views/detalletrabajo.html',
+			controller 	: 'DetalleTrabajoController'
+		})
+        .when('/contacto', {
             templateUrl : 'views/contacto.html',
             controller  : 'ContactoController'
         })
-        .when('/error/',{
+        .when('/foros', {
+			templateUrl : 'views/foros.html',
+			controller 	: 'ForosController'
+		})
+        .when('/error',{
             templateUrl : 'views/404.html',
             controller  : 'error' 
-        })
+        }) 
 		.otherwise({
 			redirectTo: 'error'
 		});

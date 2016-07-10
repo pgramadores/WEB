@@ -18,7 +18,7 @@
                                         <div class="colorfulcats">
                                             <a href="#"><span class="label label-primary">Full time</span></a>
                                         </div>
-                                        <a href="single-job.html">{{key.Cargo}}</h3></a>
+                                        <a href="#detalleoferta/{{ key.Cargo.split(' ').join('-') }}/{{key.idTrabajos}}">{{key.Cargo}}</h3></a>
 
                                         <div class="job-details">
                                             <ul class="">
@@ -100,35 +100,6 @@
                             </div>
                         </div><!-- end mini-widget -->
                     </div><!-- end widget -->  
-                    <div class="widget">
-                        <div class="widget-title">
-                            <h4>Social Media</h4>
-                            <hr>
-                        </div><!-- end widget-title -->
-
-                        <div class="social-media-widget m30">
-                            <ul class="list-social clearfix">
-                                <li class="facebook"><a href="#"><i class="fa fa-facebook"></i> <small>12.042</small></a></li>
-                                <li class="twitter"><a href="#"><i class="fa fa-twitter"></i> <small>67.221</small></a></li>
-                                <li class="googleplus"><a href="#"><i class="fa fa-google-plus"></i> <small>44.213</small></a></li>
-                                <li class="rss"><a href="#"><i class="fa fa-rss"></i> <small>22.551</small></a></li>
-                                <li class="pinterest"><a href="#"><i class="fa fa-pinterest"></i> <small>33.122</small></a></li>
-                                <li class="linkedin"><a href="#"><i class="fa fa-linkedin"></i> <small>55.123</small></a></li>
-                                <li class="youtube"><a href="#"><i class="fa fa-youtube"></i> <small>44.112</small></a></li>
-                                <li class="instagram"><a href="#"><i class="fa fa-instagram"></i> <small>12.441</small></a></li>
-                            </ul>
-                        </div><!-- end social -->
-                    </div>
-
-                    <div class="widget hidden-xs">
-                        <div class="widget-title">
-                            <h4>Advertising</h4>
-                            <hr>
-                        </div><!-- end widget-title -->
-
-                        <div class="ads-widget m30">
-                            <a href="#"><img src="upload/banner_01.jpg" alt="" class="img-responsive"></a>
-                        </div><!-- end ads-widget -->
-                    </div><!-- end widget --> 
+                    <div ng-include="'views/redesypublicidad.html'"></div>
                 </div><!-- end col -->
             </div><!-- end row -->
