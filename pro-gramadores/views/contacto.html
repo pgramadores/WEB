@@ -23,23 +23,23 @@
                                                     <form class="row">
                                                       <div class="col-md-4 col-sm-12">
                                                             <label>Nombres <span class="required">*</span></label>
-                                                            <input type="text" class="form-control" placeholder="">
+                                                            <input type="text" class="form-control" placeholder="Juan Mora" ng-model="txtNombres">
                                                         </div>
                                                         <div class="col-md-4 col-sm-12">
                                                             <label>Correo <span class="required">*</span></label>
-                                                            <input type="email" class="form-control" placeholder="">
+                                                            <input type="email" class="form-control" placeholder="" ng-model="txtCorreo">
                                                         </div>
 
                                                         <div class="col-md-4 col-sm-12">
                                                             <label>Asunto</label>
-                                                            <input type="text" class="form-control" placeholder="">
+                                                            <input type="text" class="form-control" placeholder="" ng-model="txtAsunto">
                                                         </div>
                                                         <div class="col-md-12 col-sm-12">
                                                             <label>Tu Mensaje <span class="required">*</span></label>
-                                                            <textarea class="form-control" placeholder=""></textarea>
+                                                            <textarea class="form-control" placeholder="" ng-model="txtMensaje"></textarea>
                                                         </div>
                                                         <div class="col-md-12 col-sm-12">
-                                                            <input type="submit" value="Enviar mensaje" class="btn btn-primary" />
+                                                            <input type="submit" value="Enviar mensaje" class="btn btn-primary" ng-click="EnviarContacto($event)" />
                                                         </div>
                                                     </form>
                                                 </div>
