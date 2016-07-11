@@ -1,4 +1,12 @@
-                <div class="row">
+            <style type="text/css">
+                .modal-header{
+                    border-bottom: none !important;
+                }
+            </style>
+
+
+
+            <div class="row">
                 <div class="col-md-9 col-sm-12 col-xs-12 m22">
                     <div class="widget searchwidget joblist" ng-repeat="key in filteredTodos">
                         <div class="large-widget m30">
@@ -8,8 +16,9 @@
                                         <a href="single.html">
                                             <img alt="" src="upload/job.jpg" class="img-responsive">
                                         </a>
-                                        <a href="javascript:void(0);" ng-click="Postular(key.idTrabajos,$event)" class="btn btn-primary btn-block" >
-                                            <i class="fa fa-check"></i> Postular</a> 
+                                        <a href="javascript:void(0);" ng-click="open(key.idTrabajos)" class="btn btn-primary btn-block" >
+                                            <i class="fa fa-check"></i> Postular
+                                        </a>
                                     </div>
                                 </div>
 
@@ -103,3 +112,58 @@
                     <div ng-include="'views/redesypublicidad.html'"></div>
                 </div><!-- end col -->
             </div><!-- end row -->
+
+            <!-- Modal para postulación a trabajo -->
+            <script type="text/ng-template" id="myModalContent.html">
+                <div class="modal-header">
+                   <div class="widget-title">
+                        <h4>Formulario de postulación</h4>
+                        <hr>
+                    </div>
+                </div>
+                <div class="modal-body">
+                    <input type="hidden" name="txt" value="{{ IdEmpleoAPostular }}">
+                    <div class="row">
+                        <div class="col-md-12 col-sm-12">
+                            <div class="row">
+                                <div class="col-md-12 col-xs-12">
+                                    <div class="widget">
+                                        <!-- end widget-title -->
+                                        <div class="commentform">
+                                            <form class="row">
+                                                <div class="col-md-4 col-sm-12">
+                                                    <label>Nombres <span class="required">*</span></label>
+                                                    <input type="text" class="form-control" placeholder="Juan Mora" ng-model="txtNombres">
+                                                </div>
+                                                <div class="col-md-4 col-sm-12">
+                                                    <label>Correo <span class="required">*</span></label>
+                                                    <input type="email" class="form-control" placeholder="" ng-model="txtCorreo">
+                                                </div>
+
+                                                <div class="col-md-4 col-sm-12">
+                                                    <label>Asunto</label>
+                                                    <input type="text" class="form-control" placeholder="" ng-model="txtAsunto">
+                                                </div>
+                                                <div class="col-md-12 col-sm-12">
+                                                    <label>Tu Mensaje <span class="required">*</span></label>
+                                                    <textarea class="form-control" placeholder="" ng-model="txtMensaje"></textarea>
+                                                </div>
+                                            </form>
+                                        </div>
+                                        <!-- end newsletter -->
+                                    </div>
+                                    <!-- end form-container -->
+                                </div>
+                                <!-- end col -->
+                            </div>
+                            <!-- end row -->
+                        </div>
+                        <!-- end col -->
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-primary" type="button" ng-click="Postular(IdEmpleoAPostular,$event)">Enviar postulación</button>
+                    <button class="btn btn-warning" type="button" ng-click="cancel();ok();">Cerrar</button>
+                </div>
+            </script>
+            <!-- Fin modal -->
