@@ -3,7 +3,7 @@
 include '/MySqli/class.db.php';
 include '/PHPMailer/class.phpmailer.php';
 include '/phpmailer/class.smtp.php';
-
+include '/Utiles/class.utiles.php';
 
 class SQL{
 
@@ -61,8 +61,6 @@ class Correo{
 		    echo "Message sent!";
 		}
 	}
-
-
 }
 
 ?>
