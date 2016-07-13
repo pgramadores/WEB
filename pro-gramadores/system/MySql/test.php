@@ -2,7 +2,7 @@
 
 
 include 'sistema/class.controlador.php';
-$funciones = new Funciones();
+$funciones = new SQL();
 $data = array('i', '1');
 $sql = "select * from Trabajos where idTrabajos = ?";
 $resultado = $funciones->query($sql, $data, false);

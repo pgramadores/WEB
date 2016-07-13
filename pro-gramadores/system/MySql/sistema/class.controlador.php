@@ -3,7 +3,7 @@
 include 'sistema/class.db.php';
 
 
-class Funciones{
+class SQL{
 
 	private $IdInsertado;
 	private $datos;
