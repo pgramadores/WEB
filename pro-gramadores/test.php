@@ -1,9 +1,9 @@
 <?php
 
 
-include 'system/MySqli/class.db.php';
+include 'system/ModelClass.php';
 
-$sql = new SQL();
+$sql = new DataMySql();
 $resultado = $sql->query("CALL spRec_Trabajos_ConsultaTrabajosDisponibles();",'',false);
 
 echo json_encode($resultado);
