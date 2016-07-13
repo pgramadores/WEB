@@ -88,7 +88,7 @@ class Database{
     }
 }
 
-class SQL{
+class DataMySql{
 
     private $IdInsertado;
     private $datos;
@@ -111,10 +111,10 @@ class SQL{
         $database->sql = $sql;
         $database->parametros = $parametros;
         $database->cierre = $cierre;
-        $this->datos = $database->query($cierre);
+        $respuesta = $database->query($cierre);
         $this->IdInsertado = $database->Insert_Id;
         $this->Cantidad = $database->Cantidad;
-        return $this->datos;
+        return $respuesta;
     }
 }
 
