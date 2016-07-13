@@ -6,7 +6,7 @@
 #echo json_encode($resultado);
 
 
-include 'AbstraccionMysql/sistema/class.controlador.php';
+include 'abstraccionMysql/sistema/class.controlador.php';
 $funciones = new Funciones();
 #$data = array('i', '1');
 $sql = "CALL spRec_Trabajos_ConsultaTrabajosDisponibles()";
