@@ -1,6 +1,6 @@
 <?php
 
-include 'sistema/class.db.php';
+include 'class.db.php';
 
 
 class SQL{
