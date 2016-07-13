@@ -1,6 +1,6 @@
 angularRoutingApp.controller('TrabajoController', function($scope,$http,$uibModal,$rootScope) {
 	
-	$http.get('./system/AngularModels/TrabajosListar.php')
+	$http.get('./models/TrabajosListar.php')
     .success(function(data) {
 
         $scope.contents = data;
