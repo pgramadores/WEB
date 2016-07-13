@@ -10,7 +10,7 @@ include 'abstraccionMysql/sistema/class.controlador.php';
 $funciones = new Funciones();
 #$data = array('i', '1');
 $sql = "CALL spRec_Trabajos_ConsultaTrabajosDisponibles()";
-$resultado = $funciones->query($sql, '', false);
+$resultado = $funciones->query($sql, array(), false);
 foreach ($resultado as $campo) {
     echo $campo['idTrabajos'];
     echo $campo['Cargo'];
