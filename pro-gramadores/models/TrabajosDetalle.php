@@ -1,9 +1,10 @@
 <?php
 
-include '../ModelClass.php';
+include './system/models.php';
 
 $sql = new SQL();
-$resultado = $sql->query("CALL spRec_Trabajos_ConsultaTrabajosDisponibles();",'',false);
+$data = array('i',$_GET["IdTrabajo"]);
+$resultado = $sql->query("CALL spRec_Trabajos_DetalleTrabajo(?);",$data,false);
 
 echo json_encode($resultado);
 

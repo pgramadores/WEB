@@ -1,6 +1,3 @@
-{{ IdDetalle }}<br>
-{{ Detalle.split('-').join(' ') }}
-
             <div class="row">
                 <div class="col-md-9 col-sm-9 col-xs-12 m22 single-post">
                     <div class="widget">
@@ -18,7 +15,7 @@
                                     <div class="colorfulcats">
                                         <a href="#"><span class="label label-danger">Part Time</span></a>
                                     </div>
-                                    <h3>Head of BI & Analytics (Manager or Director)</h3>
+                                    <h3>{{ Contenido.Cargo }}</h3>
 
                                     <div class="large-post-meta">
                                         <span><a href="category.html"><i class="fa fa-clock-o"></i> 21 March 2016</a></span>
@@ -43,11 +40,11 @@
                                     </div>
 
                                     <div class="col-sm-7 job-details">
-                                        <h3>Job Details</h3>
+                                        <h3>Detalle empleo</h3>
                                         <ul class="">
-                                            <li><strong><i class="fa fa-user"></i> Publisher :</strong> <a href="#"> John DOE</a></li>
-                                            <li><strong><i class="fa fa-briefcase"></i> Job Category :</strong> <a href="#"> Web Design</a></li>
-                                            <li><strong><i class="fa fa-dollar"></i> Job Price :</strong> $21.00 - $120.00</li>
+                                            <li><strong><i class="fa fa-user"></i> Publicador :</strong> <a href="#"> {{ Contenido.Publicador }}</a></li>
+                                            <li><strong><i class="fa fa-briefcase"></i> Categoria :</strong> <a href="#"> {{ Contenido.Categoria }}</a></li>
+                                            <li><strong><i class="fa fa-dollar"></i> Sueldo :</strong> ${{ Contenido.Sueldo }}</li>
                                             <li><strong><i class="fa fa-clock-o"></i> Delivery Time :</strong> 5 Days</li>
                                             <li><strong><i class="fa fa-cog"></i> Revision :</strong> 3 Times</li>
                                         </ul>

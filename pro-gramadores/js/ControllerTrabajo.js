@@ -50,7 +50,7 @@ angularRoutingApp.controller('TrabajoController', function($scope,$http,$uibModa
     });
 
     $scope.Postular = function($idTrabajo,$event) {
-        $http.post('./system/AngularModels/TrabajosPostular.php', { idTrabajo: $idTrabajo } )
+        $http.post('./models/TrabajosPostular.php', { idTrabajo: $idTrabajo } )
         .success(function(data) {
         		angular.element($event.target).html('<i class="fa fa-check"></i> ' + data);
             })
