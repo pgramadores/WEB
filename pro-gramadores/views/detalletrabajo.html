@@ -48,7 +48,7 @@
                                             <li><strong><i class="fa fa-clock-o"></i> Delivery Time :</strong> 5 Days</li>
                                             <li><strong><i class="fa fa-cog"></i> Revision :</strong> 3 Times</li>
                                         </ul>
-                                        <a href="#appljpob" class="btn btn-primary"><i class="fa fa-check"></i> Apply Job</a> <a href="contact.html" class="btn btn-primary"><i class="fa fa-envelope-o"></i> Ask a Question</a>
+                                        <a href="javascript:void(0);"  ng-click="open(Contenido.idTrabajos)" class="btn btn-primary"><i class="fa fa-check"></i> Apply Job</a> <a href="contact.html" class="btn btn-primary"><i class="fa fa-envelope-o"></i> Ask a Question</a>
                                     </div>
                                 </div>
 
@@ -151,36 +151,10 @@
                 </div><!-- end col -->
 
                 <div class="col-md-3 col-sm-3 col-xs-12">
-                    <div class="widget">
-                        <div class="widget-title">
-                            <h4>Social Media</h4>
-                            <hr>
-                        </div><!-- end widget-title -->
+                    
 
-                        <div class="social-media-widget m30">
-                            <ul class="list-social clearfix">
-                                <li class="facebook"><a href="#"><i class="fa fa-facebook"></i> <small>12.042</small></a></li>
-                                <li class="twitter"><a href="#"><i class="fa fa-twitter"></i> <small>67.221</small></a></li>
-                                <li class="googleplus"><a href="#"><i class="fa fa-google-plus"></i> <small>44.213</small></a></li>
-                                <li class="rss"><a href="#"><i class="fa fa-rss"></i> <small>22.551</small></a></li>
-                                <li class="pinterest"><a href="#"><i class="fa fa-pinterest"></i> <small>33.122</small></a></li>
-                                <li class="linkedin"><a href="#"><i class="fa fa-linkedin"></i> <small>55.123</small></a></li>
-                                <li class="youtube"><a href="#"><i class="fa fa-youtube"></i> <small>44.112</small></a></li>
-                                <li class="instagram"><a href="#"><i class="fa fa-instagram"></i> <small>12.441</small></a></li>
-                            </ul>
-                        </div><!-- end social -->
-                    </div>
-
-                    <div class="widget hidden-xs">
-                        <div class="widget-title">
-                            <h4>Advertising</h4>
-                            <hr>
-                        </div><!-- end widget-title -->
-
-                        <div class="ads-widget m30">
-                            <a href="#"><img src="upload/banner_01.jpg" alt="" class="img-responsive"></a>
-                        </div><!-- end ads-widget -->
-                    </div><!-- end widget -->
+                    <div ng-include="'views/redesypublicidad.html'"></div>
+                    
 
                     <div class="widget">
                         <div class="widget-title">
@@ -240,4 +214,74 @@
                     </div><!-- end widget -->   
                 </div><!-- end col -->
             </div><!-- end row -->
+
+
+
+
+
+            <!-- Modal para postulación a trabajo -->
+            <script type="text/ng-template" id="myModalContent.html">
+                <div class="modal-header">
+                   <div class="widget-title">
+                        <h4>Formulario de postulación</h4>
+                        <hr>
+                    </div>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-12 col-sm-12">
+                            <div class="row">
+                                <div class="col-md-12 col-xs-12">
+                                    <div class="widget">
+                                        <!-- end widget-title -->
+                                        <div class="commentform">
+                                            <form class="row">
+                                                
+                                                <div class="col-md-12 col-sm-12">
+                                                    <label>Nombres <span class="required">*</span></label>
+                                                    <input type="text" class="form-control" placeholder="Juan Mora" ng-model="postulacion.txtNombres">
+                                                </div>
+                                                <div class="col-md-6 col-sm-12">
+                                                    <label>Correo <span class="required">*</span></label>
+                                                    <input type="email" class="form-control" placeholder="correo@dominio.com" ng-model="postulacion.txtCorreo">
+                                                </div>
+                                                <div class="col-md-6 col-sm-12">
+                                                    <label>Telefono <span class="required">*</span></label>
+                                                    <input type="text" class="form-control" placeholder="+569 1234 5678" ng-model="postulacion.txtTelefono">
+                                                </div>
+                                                <div class="col-md-6 col-sm-12">
+                                                    <label>Linkedin <span class="required">*</span></label>
+                                                    <input type="text" class="form-control" placeholder="https://linkedin.com/in/minombre" ng-model="postulacion.txtLinkedin">
+                                                </div>
+                                                <div class="col-md-6 col-sm-12">
+                                                    <label>Portafolio <span class="required">*</span></label>
+                                                    <input type="text" class="form-control" placeholder="http://misproyectosdeejemplo.com" ng-model="postulacion.txtPortafolio">
+                                                </div>
+                                                <div class="col-md-12 col-sm-12">
+                                                    <label>Experiencia</label>
+                                                    <textarea class="form-control" placeholder="" ng-model="postulacion.txtExperiencia"></textarea>
+                                                </div>
+                                                <div class="col-md-12 col-sm-12">
+                                                    <label>Carta Presentación <span class="required">*</span></label>
+                                                    <textarea class="form-control" placeholder="" ng-model="postulacion.txtCartaPresentacion"></textarea>
+                                                </div>
+                                            </form>
+                                        </div>
+                                        <!-- end newsletter -->
+                                    </div>
+                                    <!-- end form-container -->
+                                </div>
+                                <!-- end col -->
+                            </div>
+                            <!-- end row -->
+                        </div>
+                        <!-- end col -->
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-primary" type="button" ng-click="Postular($event,postulacion,IdEmpleoAPostular)">Enviar postulación</button>
+                    <button class="btn btn-warning" type="button" ng-click="cancel();ok();">Cerrar</button>
+                </div>
+            </script>
+            <!-- Fin modal -->
 

@@ -13,7 +13,7 @@ angularRoutingApp.config(function($routeProvider) {
 			templateUrl : 'views/trabajos.html',
 			controller 	: 'TrabajoController'
 		})
-		.when('/detalleoferta/:Oferta?/:IdOferta?', {
+		.when('/detalleoferta/:IdOferta?/:Oferta?/', {
 			templateUrl : 'views/detalletrabajo.html',
 			controller 	: 'DetalleTrabajoController'
 		})

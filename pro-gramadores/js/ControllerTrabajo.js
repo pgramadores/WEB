@@ -1,4 +1,4 @@
-angularRoutingApp.controller('TrabajoController', function($scope,$http,$uibModal,$rootScope) {
+angularRoutingApp.controller('TrabajoController', function($scope,$http,$uibModal) {
 	
 	$http.get('./models/TrabajosListar.php')
     .success(function(data) {
@@ -22,40 +22,7 @@ angularRoutingApp.controller('TrabajoController', function($scope,$http,$uibModa
 	    	var begin = (($scope.currentPage - 1) * $scope.numPerPage), end = begin + $scope.numPerPage;
 	    	$scope.filteredTodos = $scope.todos.slice(begin, end);
 	  	});
-	  	
-	  	$scope.animationsEnabled = true;
-
-		$scope.open = function (idttabajo) {
-
-			$scope.IdEmpleoAPostular = idttabajo;
-
-			var modalInstance = $uibModal.open({
-				animation: $scope.animationsEnabled,
-				templateUrl: 'myModalContent.html',
-				controller: 'TrabajoController',
-				scope: $scope
-			});
-
-			$rootScope.Modal = modalInstance;
-		};
-
-		$scope.ok = function () {
-			$rootScope.Modal.close('cancel');
-		};
-
-		$scope.cancel = function () {
-			$rootScope.Modal.dismiss('cancel');
-		};
-
+	  
     });
 
-    $scope.Postular = function($idTrabajo,$event) {
-        $http.post('./models/TrabajosPostular.php', { idTrabajo: $idTrabajo } )
-        .success(function(data) {
-        		angular.element($event.target).html('<i class="fa fa-check"></i> ' + data);
-            })
-        .error(function(data) {
-                console.log('Error: ' + data);
-        });
-    } 
 });

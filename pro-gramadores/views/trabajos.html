@@ -16,8 +16,8 @@
                                         <a href="single.html">
                                             <img alt="" src="upload/job.jpg" class="img-responsive">
                                         </a>
-                                        <a href="javascript:void(0);" ng-click="open(key.idTrabajos)" class="btn btn-primary btn-block" >
-                                            <i class="fa fa-check"></i> Postular
+                                        <a href="#detalleoferta/{{key.idTrabajos}}/{{key.Cargo.split(' ').join('-')}}/" class="btn btn-primary btn-block" >
+                                            <i class="fa fa-search"></i> Revisar oferta
                                         </a>
                                     </div>
                                 </div>
@@ -27,13 +27,13 @@
                                         <div class="colorfulcats">
                                             <a href="#"><span class="label label-primary">Full time</span></a>
                                         </div>
-                                        <a href="#detalleoferta/{{ key.Cargo.split(' ').join('-') }}/{{key.idTrabajos}}">{{key.Cargo}}</h3></a>
+                                        <a href="#detalleoferta/{{key.idTrabajos}}/{{ key.Cargo.split(' ').join('-') }}/">{{key.Cargo}}</h3></a>
 
                                         <div class="job-details">
                                             <ul class="">
                                                 <li><strong><i class="fa fa-user"></i> Publicador :</strong> <a href="#"> {{key.Publicador}}</a></li>
                                                 <li><strong><i class="fa fa-briefcase"></i> Categoria :</strong> <a href="#"> {{key.Categoria}}</a></li>
-                                                <li><strong><i class="fa fa-dollar"></i> Sueldo aproximado :</strong> {{key.Sueldo}}</li>
+                                                <li><strong><i class="fa fa-dollar"></i> Sueldo aproximado USD :</strong> {{key.Sueldo}}</li>
                                                 <li><strong><i class="fa fa-clock-o"></i> Tipo contrato :</strong> {{key.TipoContrato}}</li>
                                                 <li><strong><i class="fa fa-cog"></i> Etapas de ingreso :</strong> {{key.NivelEntrevista}} Etapas</li>
                                             </ul>
@@ -113,68 +113,4 @@
                 </div><!-- end col -->
             </div><!-- end row -->
 
-            <!-- Modal para postulación a trabajo -->
-            <script type="text/ng-template" id="myModalContent.html">
-                <div class="modal-header">
-                   <div class="widget-title">
-                        <h4>Formulario de postulación</h4>
-                        <hr>
-                    </div>
-                </div>
-                <div class="modal-body">
-                    <input type="hidden" name="txt" value="{{ IdEmpleoAPostular }}">
-                    <div class="row">
-                        <div class="col-md-12 col-sm-12">
-                            <div class="row">
-                                <div class="col-md-12 col-xs-12">
-                                    <div class="widget">
-                                        <!-- end widget-title -->
-                                        <div class="commentform">
-                                            <form class="row">
-                                                <div class="col-md-12 col-sm-12">
-                                                    <label>Nombres <span class="required">*</span></label>
-                                                    <input type="text" class="form-control" placeholder="Juan Mora" ng-model="txtNombres">
-                                                </div>
-                                                <div class="col-md-6 col-sm-12">
-                                                    <label>Correo <span class="required">*</span></label>
-                                                    <input type="email" class="form-control" placeholder="correo@dominio.com" ng-model="txtCorreo">
-                                                </div>
-                                                <div class="col-md-6 col-sm-12">
-                                                    <label>Telefono <span class="required">*</span></label>
-                                                    <input type="text" class="form-control" placeholder="+569 1234 5678" ng-model="txtTelefono">
-                                                </div>
-                                                <div class="col-md-6 col-sm-12">
-                                                    <label>Linkedin <span class="required">*</span></label>
-                                                    <input type="text" class="form-control" placeholder="https://linkedin.com/in/minombre" ng-model="txtLinkedin">
-                                                </div>
-                                                <div class="col-md-6 col-sm-12">
-                                                    <label>Portafolio <span class="required">*</span></label>
-                                                    <input type="text" class="form-control" placeholder="http://misproyectosdeejemplo.com" ng-model="txtPortafolio">
-                                                </div>
-                                                <div class="col-md-12 col-sm-12">
-                                                    <label>Experiencia</label>
-                                                    <textarea class="form-control" placeholder="" ng-model="txtExperiencia"></textarea>
-                                                </div>
-                                                <div class="col-md-12 col-sm-12">
-                                                    <label>Carta Presentación <span class="required">*</span></label>
-                                                    <textarea class="form-control" placeholder="" ng-model="txtCartaPresentacion"></textarea>
-                                                </div>
-                                            </form>
-                                        </div>
-                                        <!-- end newsletter -->
-                                    </div>
-                                    <!-- end form-container -->
-                                </div>
-                                <!-- end col -->
-                            </div>
-                            <!-- end row -->
-                        </div>
-                        <!-- end col -->
-                    </div>
-                </div>
-                <div class="modal-footer">
-                    <button class="btn btn-primary" type="button" ng-click="Postular(IdEmpleoAPostular,$event)">Enviar postulación</button>
-                    <button class="btn btn-warning" type="button" ng-click="cancel();ok();">Cerrar</button>
-                </div>
-            </script>
-            <!-- Fin modal -->
+            
