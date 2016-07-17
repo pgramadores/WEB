@@ -10,7 +10,11 @@ angularRoutingApp.controller('TrabajoController', function($scope,$http,$uibModa
 	    	for (i=1;i<=1000;i++)
 	    	$scope.todos= data;
 	  	};
-	  	$scope.filteredTodos = [],$scope.currentPage = 1,$scope.numPerPage = 5,$scope.maxSize = 5;
+
+	  	$scope.filteredTodos = [];
+	  	$scope.currentPage = 1;
+	  	$scope.numPerPage = 5;
+	  	$scope.maxSize = 5;
   	
 	  	$scope.makeTodos(); 
 	  
@@ -22,6 +26,18 @@ angularRoutingApp.controller('TrabajoController', function($scope,$http,$uibModa
 	    	var begin = (($scope.currentPage - 1) * $scope.numPerPage), end = begin + $scope.numPerPage;
 	    	$scope.filteredTodos = $scope.todos.slice(begin, end);
 	  	});
+
+	  	
+	  	$scope.totalItems = (data.length * 2);
+
+
+		$scope.setPage = function (pageNo) {
+			$scope.currentPage = pageNo;
+		};
+
+		$scope.pageChanged = function() {
+			$log.log('Page changed to: ' + $scope.currentPage);
+		};
 	  
     });
 
