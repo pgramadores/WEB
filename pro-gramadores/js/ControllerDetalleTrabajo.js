@@ -1,10 +1,14 @@
-angularRoutingApp.controller('DetalleTrabajoController', function($scope, $routeParams,$http,$uibModal,$rootScope) {
+angularRoutingApp.controller('DetalleTrabajoController', function($scope, $routeParams,$http,$uibModal,$rootScope,$sce) {
 	
 	$scope.IdDetalle = $routeParams.IdOferta;
 	$scope.Detalle = $routeParams.Oferta;
 	$http.get('./models/TrabajosDetalle.php?IdTrabajo='+$routeParams.IdOferta)
     .success(function(data) {
-        $scope.Contenido = data[0];
+        $scope.Contenido = data;
+        $scope.DescripcionGeneral =  $sce.trustAsHtml(data.DescripcionGeneral);
+        $scope.BeneficiosVentajas =  $sce.trustAsHtml(data.BeneficiosVentajas);
+        $scope.Requisitos =  $sce.trustAsHtml(data.Requisitos);
+
     });
 
     $scope.animationsEnabled = true;

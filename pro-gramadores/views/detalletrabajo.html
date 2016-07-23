@@ -1,4 +1,4 @@
-            <div class="row">
+                <div class="row">
                 <div class="col-md-9 col-sm-9 col-xs-12 m22 single-post">
                     <div class="widget">
                         <div class="large-widget m30">
@@ -48,7 +48,7 @@
                                             <li><strong><i class="fa fa-clock-o"></i> Delivery Time :</strong> 5 Days</li>
                                             <li><strong><i class="fa fa-cog"></i> Revision :</strong> 3 Times</li>
                                         </ul>
-                                        <a href="javascript:void(0);"  ng-click="open(Contenido.idTrabajos)" class="btn btn-primary"><i class="fa fa-check"></i> Apply Job</a> <a href="contact.html" class="btn btn-primary"><i class="fa fa-envelope-o"></i> Ask a Question</a>
+                                        <a href="javascript:void(0);"  ng-click="open(Contenido.idTrabajos)" class="btn btn-primary"><i class="fa fa-check"></i> Postular</a> <a href="contact.html" class="btn btn-primary"><i class="fa fa-envelope-o"></i> Ask a Question</a>
                                     </div>
                                 </div>
 
@@ -56,38 +56,23 @@
 
                             <div class="post-desc">
 
-                                <h3>Overview</h3>
+                                <h3>Descripción General</h3>
+
+                                <hr>
+                                
+                                <div ng-bind-html="DescripcionGeneral"></div>
+
+                                <h3>Beneficios o Ventajas</h3>
 
                                 <hr>
 
-                                <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in in professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source...</p>
+                                <div ng-bind-html="BeneficiosVentajas"></div>
 
-                                <p><strong>This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section</strong></p>
-
-                                <h3>Benefits & Perks</h3>
+                                <h3>Requisitos</h3>
 
                                 <hr>
 
-                                <ul class="check">
-                                    <li>Set your own Dropbox storage quota</li>
-                                    <li>Free breakfast, lunch and dinner daily, plus tons of snacks and beverages</li>
-                                    <li>Office across from the SF Giants’ ballpark</li>
-                                    <li>Really flexible hours</li>
-                                    <li>Eighteen days of paid vacation and eleven paid holidays</li>
-                                    <li>If you’re sick, just stay home and get better</li>
-                                    <li>Subsidized gym and commuter programs, including our very own Dropbox shuttle service within San Francisco
-                                    401(k)</li>
-                                    <li>Vision, dental, life, and health insurance too</li>
-                                    <li>Join the band. Complete music studio equipped with drums, P.A., amplifiers, etc…</li>
-                                    <li>Whiskey Fridays</li>
-                                    <li>Gaming! Starcraft, dedicated game rooms, DDR (yep, a real machine), ping pong, tournaments, and more</li>
-                                </ul>
-
-                                <h3>Qualifications</h3>
-
-                                <hr>
-
-                                <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel ntium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. </p>
+                                <div ng-bind-html="Requisitos"></div>
 
                                 <hr>
 
@@ -105,7 +90,7 @@
                                 <div class="row">
                                     <div class="col-md-12">
                                         <div class="widget">
-                                            <h3>Apple Job Form</h3>
+                                            <h3>Postular</h3>
 
                                             <hr>
 
