@@ -5,8 +5,9 @@ Proyecto de pro-gramadores desarrollado en angular para la pagina de pro-gramado
 ### Distribución de tareas ####
 
 * Andres Rodriguez :: Inicio | Noticias
-* Juan Mora :: Educación | Trabajos | Contacto
-* Jonathan Veliz:: Foros
+* Juan Mora :: Trabajos | Contacto
+* Jonathan Veliz :: Foros
+* Sin Asignar :: Educación
 
 ### Acceso a la base de datos ###
 
