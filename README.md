@@ -31,6 +31,7 @@ Ejemplo:
 * UtilesPais
 * TrabajosTrabajos
 
+
 La aplicación la estamos desarrollando a través de procedimientos almacenados de mysql, la lógica de los nombres de los procedimientos par mantener el orden y entendimiento es el siguiente:
 
 spTipo_Modulo_DescripcionDeLoQueHace
