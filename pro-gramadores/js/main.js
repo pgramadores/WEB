@@ -17,6 +17,10 @@ angularRoutingApp.config(function($routeProvider) {
 			templateUrl : 'views/detalletrabajo.html',
 			controller 	: 'DetalleTrabajoController'
 		})
+		.when('/creaoferta', {
+			templateUrl : 'views/creaoferta.html',
+			controller 	: 'CreaTrabajoController'
+		})
         .when('/contacto', {
             templateUrl : 'views/contacto.html',
             controller  : 'ContactoController'
