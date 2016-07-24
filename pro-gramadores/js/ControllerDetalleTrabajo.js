@@ -1,7 +1,9 @@
-angularRoutingApp.controller('DetalleTrabajoController', function($scope, $routeParams,$http,$uibModal,$rootScope,$sce) {
+angularRoutingApp.controller('DetalleTrabajoController', function($scope, $routeParams,$http,$uibModal,$rootScope,$sce,$location) {
 	
 	$scope.IdDetalle = $routeParams.IdOferta;
 	$scope.Detalle = $routeParams.Oferta;
+	$scope.Ubicacion = escape($location.absUrl());
+
 	$http.get('./models/TrabajosDetalle.php?IdTrabajo='+$routeParams.IdOferta)
     .success(function(data) {
         $scope.Contenido = data;
