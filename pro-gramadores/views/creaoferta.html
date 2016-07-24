@@ -2,6 +2,12 @@
 			<div class="row">
                 <div class="col-md-9 col-sm-9 col-xs-12 m22 single-post">
                     <div class="widget">
+
+	                    <div class="widget-title">
+	                        <h4 style="text-transform: none;">Creación de oferta laboral</h4>
+	                        <hr>
+	                    </div>
+
                         <div class="large-widget m30">
 
                             <div class="post-desc">
@@ -12,32 +18,87 @@
 
                                             <div id="appljpob" class="commentform">
                                                 <form class="row">
-                                                    <div class="col-md-12 col-sm-12">
-                                                        <label>Details <span class="required">*</span></label>
-                                                        <textarea class="form-control" placeholder=""></textarea>
+                                                	<div class="col-md-12 col-sm-12">
+                                                        <label>Titulo de oferta<span class="required">*</span></label>
+                                                        <input type="text" ng-model="txtTituloOferta" class="form-control" placeholder="">
                                                     </div>
                                                     <div class="col-md-6 col-sm-12">
-                                                        <label>Your Offer For This Job <span class="required">*</span></label>
-                                                        <input type="text" class="form-control" placeholder="">
+                                                        <label>Nombre empresa/publicador<span class="required">*</span></label>
+                                                        <input type="text" ng-model="txtPublicador" class="form-control" placeholder="">
                                                     </div>
                                                     <div class="col-md-6 col-sm-12">
-                                                        <label>Your Delivery Time <span class="required">*</span></label>
-                                                        <input type="email" class="form-control" placeholder="">
+                                                        <label>Categoria<span class="required">*</span></label>
+                                                        <select ng-model="txtCategoria" class="form-control">
+                                                        	<option value="Desarrollo">Desarrollo</option>
+                                                        	<option value="Arquitectura">Arquitectura</option>
+                                                        	<option value="Redes">Redes</option>
+                                                        	<option value="Administracion">Administracion</option>
+                                                        	<option value="Seguridad">Seguridad</option>
+                                                        	<option value="Otro">Otro</option>
+                                                        </select>
                                                     </div>
-                                                    <div class="col-md-4 col-sm-12">
-                                                        <label>Your Name <span class="required">*</span></label>
-                                                        <input type="text" class="form-control" placeholder="">
+                                                    <div class="col-md-6 col-sm-12">
+                                                        <label>Renta ofrecida aprox (USD)<span class="required">*</span></label>
+                                                        <input type="text" ng-model="txtRenta" class="form-control" placeholder="">
                                                     </div>
-                                                    <div class="col-md-4 col-sm-12">
-                                                        <label>Your Email <span class="required">*</span></label>
-                                                        <input type="email" class="form-control" placeholder="">
+                                                    <div class="col-md-6 col-sm-12">
+                                                        <label>Tipo contrato<span class="required">*</span></label>
+                                                        <select ng-model="txtTipoContrato" class="form-control">
+                                                        	<option value="PlazoFijo">Plazo fijo</option>
+                                                        	<option value="PlazoFijo">Proyecto</option>
+                                                        	<option value="Indefinido">Indefinido</option>
+                                                        	<option value="Otro">Otro</option>
+                                                        </select>
                                                     </div>
-                                                    <div class="col-md-4 col-sm-12">
-                                                        <label>Your Portfolio Link</label>
-                                                        <input type="text" class="form-control" placeholder="">
+                                                    <div class="col-md-6 col-sm-12">
+                                                        <label>Cantidad etapas de evaluación<span class="required">*</span></label>
+                                                        <select ng-model="txtEtapasEvaluacion" class="form-control">
+                                                        	<option value="1">1</option>
+                                                        	<option value="2">2</option>
+                                                        	<option value="3">3</option>
+                                                        </select>
+                                                    </div>
+                                                    <div class="col-md-6 col-sm-12">
+                                                        <label>Modalidad de trabajo<span class="required">*</span></label>
+                                                        <select ng-model="txtModalidad" class="form-control">
+                                                        	<option value="Part-Time">Part-Time</option>
+                                                        	<option value="Full">Full Time</option>
+                                                        	<option value="Otro">Otro</option>
+                                                        </select>
                                                     </div>
                                                     <div class="col-md-12 col-sm-12">
-                                                        <input type="submit" value="Apply Job" class="btn btn-primary" />
+                                                        <label>Descripción general <span class="required">*</span></label>
+                                                        <div class="container lighter micontenedor">
+            												<div text-angular ng-model="txtDescripcionGeneral" name="editorDesc" ta-text-editor-class="border-around container" ta-html-editor-class="border-around"></div>
+														</div>
+                                                    </div>
+                                                    <div class="col-md-12 col-sm-12">
+                                                        <label>Beneficios o Ventajas <span class="required">*</span></label>
+                                                        <div class="container lighter micontenedor">
+            												<div text-angular ng-model="txtBeneficiosVentajas" name="editorBeneficios" ta-text-editor-class="border-around container" ta-html-editor-class="border-around"></div>
+														</div>
+                                                    </div>
+                                                    <div class="col-md-12 col-sm-12">
+                                                        <label>Requisitos <span class="required">*</span></label>
+                                                        <div class="container lighter micontenedor">
+            												<div text-angular ng-model="txtRequisitos" name="editorRequisitos" ta-text-editor-class="border-around container" ta-html-editor-class="border-around"></div>
+														</div>
+                                                    </div>
+                                                    <div class="col-md-12 col-md-12">
+														<div class="col-sm-12 col-sm-12 micontenedor">
+															<label>Seleccione imagen</label>
+															<div><input type="file" id="fileInput" /></div>
+															<div class="cropArea">
+																<img-crop image="myImage" result-image="myCroppedImage" result-image-size="600" area-type="square"></img-crop>
+															</div>
+														</div>
+														<!-- <div class="col-sm-6 col-sm-12 micontenedor">
+															<label>Imagen final:</label>
+															<div><img ng-src="{{myCroppedImage}}" style="width:300px;" /></div>
+														</div> -->
+                                                	</div>
+                                                	<div class="col-md-12 col-sm-12">
+                                                        <input type="submit" value="Crear oferta" class="btn btn-primary" />
                                                     </div>
                                                 </form>
                                             </div><!-- end newsletter -->
@@ -45,8 +106,6 @@
                                     </div><!-- end col -->
                                 </div><!-- end row -->
                             </div><!-- end post-desc -->
-
-
                         </div><!-- end large-widget -->
                     </div><!-- end widget -->
                 </div><!-- end col -->
