@@ -1,5 +1,7 @@
-angularRoutingApp.controller('mainController', function($scope) {
-	$scope.message = 'Hola, Mundo!';
+angularRoutingApp.controller('mainController', function($scope,$rootScope) {
+
+	$rootScope.Titulo = "Pagina Principal";
+
     $scope.initTickerMe = function () {
         $(function () {
         // wait till load event fires so all resources are available

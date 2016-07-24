@@ -1,5 +1,7 @@
-angularRoutingApp.controller('ContactoController', function($scope, $http) {
-	$scope.message = 'Esta es la página de "Contacto", aquí podemos poner un formulario';
+angularRoutingApp.controller('ContactoController', function($scope, $http,$rootScope) {
+	
+    $rootScope.Titulo = "Contactanos";
+
     $scope.EnviarContacto = function($event) {
         $http.post('./system/AngularModels/ContactoEnviaMensaje.php', { 
         	Nombres: $scope.txtNombres,

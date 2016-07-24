@@ -1,4 +1,6 @@
-angularRoutingApp.controller('TrabajoController', function($scope,$http,$uibModal) {
+angularRoutingApp.controller('TrabajoController', function($scope,$http,$uibModal,$rootScope) {
+
+	$rootScope.Titulo = "Lista Ofertas Laborales";
 
 	$http.get('http://ipinfo.io/json')
 	.success(function(datos) {

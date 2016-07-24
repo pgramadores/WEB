@@ -1,5 +1,7 @@
 angularRoutingApp.controller('DetalleTrabajoController', function($scope, $routeParams,$http,$uibModal,$rootScope,$sce,$location) {
 	
+	$rootScope.Titulo = "Detalle oferta N° "+$routeParams.IdOferta;
+
 	$scope.IdDetalle = $routeParams.IdOferta;
 	$scope.Detalle = $routeParams.Oferta;
 	$scope.Ubicacion = escape($location.absUrl());
