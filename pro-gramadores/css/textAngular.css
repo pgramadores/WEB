@@ -38,7 +38,7 @@
 	min-height: 300px;
 	padding: 6px 12px;
 	border: solid 1px #ddd;
-    margin: 10px -15px;
+    margin: 10px 0px;
 }
 
 .ta-editor:focus {
