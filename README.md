@@ -42,6 +42,8 @@ Ejemplos:
 
 ### Otros ###
 
+La versión de PHP debe ser 5.6 o superior.
+
 Las librerías de angular que se están usando en este proyecto están disponibles para ser incluidas en esta url, favor usar solo librerías de esta versión 1.5.3.
 
 https://code.angularjs.org/1.5.3/
