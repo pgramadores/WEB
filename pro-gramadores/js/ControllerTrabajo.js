@@ -8,6 +8,8 @@ angularRoutingApp.controller('TrabajoController', function($scope,$http,$uibModa
        $http.get('./models/TrabajosListar.php?Pais='+datos.country)
 	    .success(function(data) {
 
+	    	$scope.Spinner = "Ocultar";
+
 	        $scope.contents = data;
 
 	        $scope.makeTodos = function() {
@@ -49,6 +51,7 @@ angularRoutingApp.controller('TrabajoController', function($scope,$http,$uibModa
    	});
 
 	
+
 		
 
 });
