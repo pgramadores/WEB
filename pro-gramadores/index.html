@@ -61,9 +61,10 @@
     <script src='js/ControllerForos.js'></script>
     <script src='js/ControllerRedesSociales.js'></script>
     <script src='js/ControllerCreaTrabajo.js'></script>
+    <base href="/">
 </head>
 
-<body ng-controller='mainController'>
+<body>
 
     <div class="left-menu hidden-sm hidden-md hidden-xs">
         <ul class="dm-social">
@@ -120,7 +121,7 @@
 
                         <div id="navbar" class="navbar-collapse collapse">
                             <ul class="nav navbar-nav">
-                                <li class="active"><a href="./#/"><i class="fa fa-home"></i> Inicio</a></li>
+                                <li class="active"><a href="./"><i class="fa fa-home"></i> Inicio</a></li>
                                 <li class="dropdown hasmenu">
                                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Noticias <span class="fa fa-angle-down"></span></a>
                                     <ul class="dropdown-menu">
@@ -438,9 +439,9 @@
                                     </ul>
                                 </li>
 
-                                <li><a href="#trabajos">Trabajos</a></li>
-                                <li><a href="#foros">Foros</a></li>
-                                <li><a href="#contacto">Contacto</a></li>
+                                <li><a href="/trabajos">Trabajos</a></li>
+                                <li><a href="/foros">Foros</a></li>
+                                <li><a href="/contacto">Contacto</a></li>
                             </ul>
                             <ul class="nav navbar-nav navbar-right searchandbag">
                                 <li class="dropdown searchdropdown hasmenu">
@@ -521,7 +522,7 @@
                             <div class="links-widget m30">
                                 <ul class="check">
                                     <li><a href="#">Administradores</a></li>
-                                    <li><a href="#/creaoferta">Publica tu oferta laboral</a></li>
+                                    <li><a href="/creaoferta">Publica tu oferta laboral</a></li>
                                     <li><a href="#">Publicidad</a></li>
                                     <li><a href="#">Write a review</a></li>
                                     <li><a href="#">Reporta algun error o mejora</a></li>
