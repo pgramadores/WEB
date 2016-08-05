@@ -2,6 +2,8 @@
 
 Proyecto de pro-gramadores desarrollado en angular para la pagina de pro-gramadores.org
 
+El acceso a pruebas en desarrollo son a traves del sitio http://pgramadores.raicerk.cl donde se hacen los deploy del sistema cuando se aprueban cambios masivos como rama final
+
 ### Distribución de tareas ####
 
 * Andres Rodriguez :: Inicio | Noticias
