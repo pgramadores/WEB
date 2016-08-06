@@ -1,8 +1,8 @@
 // Creación del módulo
-var angularRoutingApp = angular.module('angularRoutingApp', ['ngRoute','ui.bootstrap','ngAnimate','ngSanitize','textAngular','ngImgCrop']);
+var angularRoutingApp = angular.module('angularRoutingApp', ['ngRoute','ui.bootstrap','ngAnimate','ngSanitize','textAngular','ngImgCrop','metatags']);
 
 // // Configuración de las rutas
-angularRoutingApp.config(function($routeProvider,$locationProvider) {
+angularRoutingApp.config(function($routeProvider,$locationProvider,MetaTagsProvider) {
 
 	$routeProvider
 		.when('/', {
@@ -40,7 +40,7 @@ angularRoutingApp.config(function($routeProvider,$locationProvider) {
         // use the HTML5 History API
         $locationProvider.html5Mode(true);
 
-    //check browser support
+        //check browser support
         if(window.history && window.history.pushState){
             //$locationProvider.html5Mode(true); will cause an error $location in HTML5 mode requires a  tag to be present! Unless you set baseUrl tag after head tag like so: <head> <base href="/">
 
@@ -52,4 +52,34 @@ angularRoutingApp.config(function($routeProvider,$locationProvider) {
                  requireBase: false
           });
         }
+
+    MetaTagsProvider
+          .when('/', {
+            title: 'Inicio',
+            description: 'Cool',
+            fb_title: 'My title',
+            fb_site_name: 'My site name',
+            fb_url: 'www.blablabla.blabla',
+            fb_description: 'Cool website',
+            fb_type: 'Facebook type',
+            fb_image: 'an_image.jpg',
+            robots: 'index, follow',
+            keywords: 'some cool keywords'
+          })
+          .when('/detalleoferta/:IdOferta?/:Oferta?/',{
+            title: 'detalle de la oferta',
+            description: function(IdOferta, Oferta){
+                return 'COOOOOOOL' + IdOferta + " Super " + Oferta;
+            },
+            robots: 'index, follow',
+            keywords: 'some cool keywords'
+          })
+          .otherwise({
+            title: 'otherwise',
+            description: 'Another great page'
+          });
+});
+
+angularRoutingApp.run(function(MetaTags){
+    MetaTags.initialize();
 });
