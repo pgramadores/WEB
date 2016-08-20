@@ -20,13 +20,12 @@
     <meta name="keywords" content="{{ metatags.keywords }}" >
 
     <!-- FACEBOOK META -->
-    <meta property="fb:app_id" content="588829427962617" >
     <meta property="og:url" content="{{ metatags.fb_url }}"  >
     <meta property="og:title" content="{{ metatags.fb_title }}" >
     <meta property="og:image" content="{{ metatags.fb_image }}"  >
     <meta property="og:description" content="{{ metatags.fb_description }}"  >
     <meta property="og:site_name" content="{{ metatags.fb_site_name }}" >
-    <meta property="og:type" content="article" >
+    <meta property="og:type" content="website" >
 
     <!-- FAVICONS -->
     <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
@@ -52,6 +51,8 @@
     <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
 
+
+
     <!--Angular js-->
     <script src='//code.angularjs.org/1.5.3/angular.js'></script>
     <script src='//code.angularjs.org/1.5.3/angular-animate.js'></script>
@@ -76,6 +77,24 @@
 </head>
 
 <body>
+    <!-- Facebook app -->
+    <script>
+      window.fbAsyncInit = function() {
+        FB.init({
+          appId      : '588829427962617',
+          xfbml      : true,
+          version    : 'v2.7'
+        });
+      };
+
+      (function(d, s, id){
+         var js, fjs = d.getElementsByTagName(s)[0];
+         if (d.getElementById(id)) {return;}
+         js = d.createElement(s); js.id = id;
+         js.src = "//connect.facebook.net/en_US/sdk.js";
+         fjs.parentNode.insertBefore(js, fjs);
+       }(document, 'script', 'facebook-jssdk'));
+    </script>
 
     <div class="left-menu hidden-sm hidden-md hidden-xs">
         <ul class="dm-social">
