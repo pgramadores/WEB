@@ -15,14 +15,14 @@ file_put_contents($imagen, $convertida);
 $sql = new SQL();
 
 $data = array('sssisssssss',
-	isset($recibe["Cargo"]) ? $recibe["Cargo"]:'',
-	isset($recibe["Publicador"]) ? $recibe["Publicador"]:'',
-	isset($recibe["Categoria"]) ? $recibe["Categoria"]:'',
-	isset($recibe["Renta"]) ? $recibe["Renta"]:'',
-	isset($recibe["TipoContrato"]) ? $recibe["TipoContrato"]:'',
-	isset($recibe["DescripcionGeneral"]) ? $recibe["DescripcionGeneral"]:'',
-	isset($recibe["BeneficiosVentajas"]) ? $recibe["BeneficiosVentajas"]:'',
-	isset($recibe["Requisitos"]) ? $recibe["Requisitos"]:'',
+	isset($recibe["Cargo"]) ? utf8_decode($recibe["Cargo"]):'',
+	isset($recibe["Publicador"]) ? utf8_decode($recibe["Publicador"]):'',
+	isset($recibe["Categoria"]) ? utf8_decode($recibe["Categoria"]):'',
+	isset($recibe["Renta"]) ? utf8_decode($recibe["Renta"]):'',
+	isset($recibe["TipoContrato"]) ? utf8_decode($recibe["TipoContrato"]):'',
+	isset($recibe["DescripcionGeneral"]) ? utf8_decode($recibe["DescripcionGeneral"]):'',
+	isset($recibe["BeneficiosVentajas"]) ? utf8_decode($recibe["BeneficiosVentajas"]):'',
+	isset($recibe["Requisitos"]) ? utf8_decode($recibe["Requisitos"]):'',
 	'CL',
 	isset($imagen) ? $imagen:'',
 	'2016-08-15'
@@ -33,11 +33,13 @@ $data = array('sssisssssss',
 	$sql->query("CALL spIns_Trabajos_CreaOfertaTrabajo(?,?,?,?,?,?,?,?,?,?,?);",$data,True);
 
 
-$datos = array(
-				'IdInsertado' => $sql->IdInsertado,
-				'CantidadAfectada' => $sql->CantidadRegistros
-			);
+// $datos = array(
+// 				'IdInsertado' => $sql->IdInsertado,
+// 				'CantidadAfectada' => $sql->CantidadRegistros
+// 			);
+//
+// echo json_encode($datos);
 
-echo json_encode($datos);
+var_dump($data);
 
 ?>
