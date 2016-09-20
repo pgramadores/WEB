@@ -15,8 +15,8 @@ angularRoutingApp.controller('CreaTrabajoController', function($scope, $http, $r
             BeneficiosVentajas: $scope.txtBeneficiosVentajas,
             Requisitos:         $scope.txtRequisitos,
             Imagen:             $scope.myCroppedImage,
-            FechaCaduca:        $scope.txtFechaCaduca
-
+            FechaCaduca:        $scope.txtFechaCaduca,
+            CorreoPublicador:   $scope.txtCorreoPublicador
         })
         .success(function(data) {
         		console.log(data);

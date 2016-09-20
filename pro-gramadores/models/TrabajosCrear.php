@@ -14,7 +14,7 @@ file_put_contents('..'.$imagen, $convertida);
 
 $sql = new SQL();
 
-$data = array('sssisssssss',
+$data = array('sssissssssss',
 	isset($recibe["Cargo"]) ? utf8_decode($recibe["Cargo"]):'',
 	isset($recibe["Publicador"]) ? utf8_decode($recibe["Publicador"]):'',
 	isset($recibe["Categoria"]) ? utf8_decode($recibe["Categoria"]):'',
@@ -25,10 +25,11 @@ $data = array('sssisssssss',
 	isset($recibe["Requisitos"]) ? utf8_decode($recibe["Requisitos"]):'',
 	Utiles::PaisIP(),
 	isset($imagen) ? $imagen:'',
-	isset($recibe["FechaCaduca"]) ? utf8_decode($recibe["FechaCaduca"]):''
+	isset($recibe["FechaCaduca"]) ? utf8_decode($recibe["FechaCaduca"]):'',
+	isset($recibe["CorreoPublicador"]) ? utf8_decode($recibe["CorreoPublicador"]):''
 );
 
-$sql->query("CALL spIns_Trabajos_CreaOfertaTrabajo(?,?,?,?,?,?,?,?,?,?,?);",$data,True);
+$sql->query("CALL spIns_Trabajos_CreaOfertaTrabajo(?,?,?,?,?,?,?,?,?,?,?,?);",$data,True);
 
 
 var_dump($data);
