@@ -3,11 +3,13 @@
                     border-bottom: none !important;
                 }
             </style>
-
-
+            
             <div class="row">
+                
                 <div class="col-md-9 col-sm-12 col-xs-12 m22">
-                    <div ng-class="Spinner" id="Spinner" class=""><img src="images/ajax-loader.gif"></div>
+                    <div ng-class="Spinner" id="Spinner" class="">                    
+                        <img src="images/ajax-loader.gif">
+                    </div>
                 </div>
             </div>
 
@@ -18,7 +20,7 @@
                             <div class="post row clearfix">
                                 <div class="col-md-4">
                                     <div class="post-media">
-                                        <a href="single.html">
+                                        <a href="/detalleoferta/{{key.idTrabajos}}/{{ key.Cargo.split(' ').join('-') }}/">
                                             <img alt="" src="{{key.Imagen}}" class="img-responsive">
                                         </a>
                                         <a href="/detalleoferta/{{key.idTrabajos}}/{{key.Cargo.split(' ').join('-')}}/" class="btn btn-primary btn-block" >
@@ -38,7 +40,7 @@
                                             <ul class="">
                                                 <li><strong><i class="fa fa-user"></i> Publicador :</strong> <a href="#"> {{key.Publicador}}</a></li>
                                                 <li><strong><i class="fa fa-briefcase"></i> Categoria :</strong> <a href="#"> {{key.Categoria}}</a></li>
-                                                <li><strong><i class="fa fa-dollar"></i> Sueldo aproximado USD :</strong> {{key.Sueldo}}</li>
+                                                <li><strong><i class="fa fa-dollar"></i> Renta USD :</strong> {{key.Sueldo}}</li>
                                                 <li><strong><i class="fa fa-clock-o"></i> Tipo contrato :</strong> {{key.TipoContrato}}</li>
                                                 <li><strong><i class="fa fa-cog"></i> Etapas de ingreso :</strong> {{key.NivelEntrevista}} Etapas</li>
                                             </ul>
