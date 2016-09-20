@@ -4,7 +4,6 @@
                     <div class="widget">
                         <div class="large-widget m30">
                             <div class="post clearfix">
-
                                 <div class="title-area text-center">
                                     <div class="bread">
                                         <ol class="breadcrumb">
@@ -17,7 +16,6 @@
                                         <a href="#"><span class="label label-danger">Part Time</span></a>
                                     </div>
                                     <h3>{{ Contenido.Cargo }}</h3>
-
                                     <div class="large-post-meta">
                                         <span><a href="category.html"><i class="fa fa-clock-o"></i> 21 March 2016</a></span>
                                         <small class="hidden-xs">&#124;</small>
@@ -25,7 +23,6 @@
                                         <small class="hidden-xs">&#124;</small>
                                         <span class="hidden-xs"><a href="single.html"><i class="fa fa-briefcase"></i> Web Design</a></span>
                                     </div><!-- end meta -->
-
                                     <div class="post-sharing">
                                         <ul class="list-inline">
                                             <li><a target="_blank" ng-click="CompartirFacebook()" href="javascript:void(0);" class="fb-button btn btn-primary"><i class="fa fa-facebook"></i> <span class="hidden-xs">Compartir en Facebook</span></a></li>
@@ -34,10 +31,9 @@
                                         </ul>
                                     </div><!-- end post-sharing -->
                                 </div><!-- /.pull-right -->
-
                                 <div class="job-media row">
                                     <div class="col-sm-5">
-                                        <img alt="" src="upload/job.jpg" class="img-responsive">
+                                        <img alt="" src="{{ Contenido.Imagen }}" class="img-responsive">
                                     </div>
 
                                     <div class="col-sm-7 job-details">
@@ -45,38 +41,24 @@
                                         <ul class="">
                                             <li><strong><i class="fa fa-user"></i> Publicador :</strong> <a href="#"> {{ Contenido.Publicador }}</a></li>
                                             <li><strong><i class="fa fa-briefcase"></i> Categoria :</strong> <a href="#"> {{ Contenido.Categoria }}</a></li>
-                                            <li><strong><i class="fa fa-dollar"></i> Sueldo :</strong> ${{ Contenido.Sueldo }}</li>
+                                            <li><strong><i class="fa fa-dollar"></i> Sueldo :</strong> USD {{ Contenido.Sueldo }}</li>
                                             <li><strong><i class="fa fa-clock-o"></i> Delivery Time :</strong> 5 Days</li>
                                             <li><strong><i class="fa fa-cog"></i> Revision :</strong> 3 Times</li>
                                         </ul>
-                                        <a href="javascript:void(0);"  ng-click="open(Contenido.idTrabajos)" class="btn btn-primary"><i class="fa fa-check"></i> Postular</a> <a href="contact.html" class="btn btn-primary"><i class="fa fa-envelope-o"></i> Ask a Question</a>
                                     </div>
                                 </div>
-
                             </div><!-- end post -->
-
                             <div class="post-desc">
-
                                 <h3>Descripción General</h3>
-
                                 <hr>
-                                
                                 <div ng-bind-html="DescripcionGeneral"></div>
-
                                 <h3>Beneficios o Ventajas</h3>
-
                                 <hr>
-
                                 <div ng-bind-html="BeneficiosVentajas"></div>
-
                                 <h3>Requisitos</h3>
-
                                 <hr>
-
                                 <div ng-bind-html="Requisitos"></div>
-
                                 <hr>
-
                                 <div class="post-sharing">
                                     <ul class="list-inline">
                                         <li><a href="#" class="fb-button btn btn-primary"><i class="fa fa-facebook"></i> <span class="hidden-xs">Share on Facebook</span></a></li>
@@ -84,146 +66,16 @@
                                         <li><a href="#" class="gp-button btn btn-primary"><i class="fa fa-google-plus"></i></a></li>
                                     </ul>
                                 </div><!-- end post-sharing -->
-
                                 <br>
                                 <br>
-
                                 <div class="row">
                                     <div class="col-md-12">
                                         <div class="widget">
                                             <h3>Postular</h3>
-
                                             <hr>
-
                                             <div id="appljpob" class="commentform">
                                                 <form class="row">
                                                     <div class="col-md-12 col-sm-12">
-                                                        <label>Details <span class="required">*</span></label>
-                                                        <textarea class="form-control" placeholder=""></textarea>
-                                                    </div>
-                                                    <div class="col-md-6 col-sm-12">
-                                                        <label>Your Offer For This Job <span class="required">*</span></label>
-                                                        <input type="text" class="form-control" placeholder="">
-                                                    </div>
-                                                    <div class="col-md-6 col-sm-12">
-                                                        <label>Your Delivery Time <span class="required">*</span></label>
-                                                        <input type="email" class="form-control" placeholder="">
-                                                    </div>
-                                                    <div class="col-md-4 col-sm-12">
-                                                        <label>Your Name <span class="required">*</span></label>
-                                                        <input type="text" class="form-control" placeholder="">
-                                                    </div>
-                                                    <div class="col-md-4 col-sm-12">
-                                                        <label>Your Email <span class="required">*</span></label>
-                                                        <input type="email" class="form-control" placeholder="">
-                                                    </div>
-                                                    <div class="col-md-4 col-sm-12">
-                                                        <label>Your Portfolio Link</label>
-                                                        <input type="text" class="form-control" placeholder="">
-                                                    </div>
-                                                    <div class="col-md-12 col-sm-12">
-                                                        <input type="submit" value="Apply Job" class="btn btn-primary" />
-                                                    </div>
-                                                </form>
-                                            </div><!-- end newsletter -->
-                                        </div><!-- end widget -->   
-                                    </div><!-- end col -->
-                                </div><!-- end row -->
-                            </div><!-- end post-desc -->
-
-
-                        </div><!-- end large-widget -->
-                    </div><!-- end widget -->
-                </div><!-- end col -->
-
-                <div class="col-md-3 col-sm-3 col-xs-12">
-                    
-
-                    <div ng-include="'views/redesypublicidad.html'"></div>
-                    
-
-                    <div class="widget">
-                        <div class="widget-title">
-                            <h4>Carrier</h4>
-                            <hr>
-                        </div><!-- end widget-title -->
-
-                        <div class="mini-widget carrier-widget m30">
-                            <div class="post clearfix">
-                                <div class="mini-widget-thumb">
-                                    <a href="single.html">
-                                        <img alt="" src="upload/carrer_01.jpg" class="img-responsive">
-                                    </a>
-                                </div>
-                                <div class="mini-widget-title">
-                                    <a href="single.html"> We are looking a team member</a>
-                                    <span class="label label-primary">Full time</span>
-                                </div>
-                            </div>
-
-                            <div class="post clearfix">
-                                <div class="mini-widget-thumb">
-                                    <a href="single.html">
-                                        <img alt="" src="upload/carrer_02.jpg" class="img-responsive">
-                                    </a>
-                                </div>
-                                <div class="mini-widget-title">
-                                    <a href="single.html"> Looking for support members (15-25 mails)</a>
-                                    <span class="label label-danger">Part time</span>
-                                </div>
-                            </div>
-
-                            <div class="post clearfix">
-                                <div class="mini-widget-thumb">
-                                    <a href="single.html">
-                                        <img alt="" src="upload/carrer_03.jpg" class="img-responsive">
-                                    </a>
-                                </div>
-                                <div class="mini-widget-title">
-                                    <a href="single.html"> Who fix my PHP problem?</a>
-                                    <span class="label label-info">Freelancer</span>
-                                </div>
-                            </div>
-
-                            <div class="post clearfix">
-                                <div class="mini-widget-thumb">
-                                    <a href="single.html">
-                                        <img alt="" src="upload/carrer_04.jpg" class="img-responsive">
-                                    </a>
-                                </div>
-                                <div class="mini-widget-title">
-                                    <a href="single.html"> Looking Logo Designer ($15 Budget) </a>
-                                    <span class="label label-info">Freelancer</span>
-                                </div>
-                            </div>
-                        </div><!-- end mini-widget -->
-                    </div><!-- end widget -->   
-                </div><!-- end col -->
-            </div><!-- end row -->
-
-
-
-
-
-            <!-- Modal para postulación a trabajo -->
-            <script type="text/ng-template" id="myModalContent.html">
-                <div class="modal-header">
-                   <div class="widget-title">
-                        <h4>Formulario de postulación</h4>
-                        <hr>
-                    </div>
-                </div>
-                <div class="modal-body">
-                    <div class="row">
-                        <div class="col-md-12 col-sm-12">
-                            <div class="row">
-                                <div class="col-md-12 col-xs-12">
-                                    <div class="widget">
-                                        <!-- end widget-title -->
-                                        <div class="commentform">
-                                            <form class="row">
-                                                
-                                                <div class="col-md-12 col-sm-12">
                                                     <label>Nombres <span class="required">*</span></label>
                                                     <input type="text" class="form-control" placeholder="Juan Mora" ng-model="postulacion.txtNombres">
                                                 </div>
@@ -251,23 +103,71 @@
                                                     <label>Carta Presentación <span class="required">*</span></label>
                                                     <textarea class="form-control" placeholder="" ng-model="postulacion.txtCartaPresentacion"></textarea>
                                                 </div>
-                                            </form>
-                                        </div>
-                                        <!-- end newsletter -->
-                                    </div>
-                                    <!-- end form-container -->
+                                                    <div class="col-md-12 col-sm-12">
+                                                        <input type="submit" value="Postular" class="btn btn-primary" ng-click="Postular($event,Contenido.idTrabajos)"/>
+                                                    </div>
+                                                </form>
+                                            </div><!-- end newsletter -->
+                                        </div><!-- end widget -->   
+                                    </div><!-- end col -->
+                                </div><!-- end row -->
+                            </div><!-- end post-desc -->
+                        </div><!-- end large-widget -->
+                    </div><!-- end widget -->
+                </div><!-- end col -->
+                <div class="col-md-3 col-sm-3 col-xs-12">
+                    <div ng-include="'views/redesypublicidad.html'"></div>
+                    <div class="widget">
+                        <div class="widget-title">
+                            <h4>Carrier</h4>
+                            <hr>
+                        </div><!-- end widget-title -->
+                        <div class="mini-widget carrier-widget m30">
+                            <div class="post clearfix">
+                                <div class="mini-widget-thumb">
+                                    <a href="single.html">
+                                        <img alt="" src="upload/carrer_01.jpg" class="img-responsive">
+                                    </a>
                                 </div>
-                                <!-- end col -->
+                                <div class="mini-widget-title">
+                                    <a href="single.html"> We are looking a team member</a>
+                                    <span class="label label-primary">Full time</span>
+                                </div>
                             </div>
-                            <!-- end row -->
-                        </div>
-                        <!-- end col -->
-                    </div>
-                </div>
-                <div class="modal-footer">
-                    <button class="btn btn-primary" type="button" ng-click="Postular($event,postulacion,IdEmpleoAPostular)">Enviar postulación</button>
-                    <button class="btn btn-warning" type="button" ng-click="cancel();ok();">Cerrar</button>
-                </div>
-            </script>
-            <!-- Fin modal -->
-
+                            <div class="post clearfix">
+                                <div class="mini-widget-thumb">
+                                    <a href="single.html">
+                                        <img alt="" src="upload/carrer_02.jpg" class="img-responsive">
+                                    </a>
+                                </div>
+                                <div class="mini-widget-title">
+                                    <a href="single.html"> Looking for support members (15-25 mails)</a>
+                                    <span class="label label-danger">Part time</span>
+                                </div>
+                            </div>
+                            <div class="post clearfix">
+                                <div class="mini-widget-thumb">
+                                    <a href="single.html">
+                                        <img alt="" src="upload/carrer_03.jpg" class="img-responsive">
+                                    </a>
+                                </div>
+                                <div class="mini-widget-title">
+                                    <a href="single.html"> Who fix my PHP problem?</a>
+                                    <span class="label label-info">Freelancer</span>
+                                </div>
+                            </div>
+                            <div class="post clearfix">
+                                <div class="mini-widget-thumb">
+                                    <a href="single.html">
+                                        <img alt="" src="upload/carrer_04.jpg" class="img-responsive">
+                                    </a>
+                                </div>
+                                <div class="mini-widget-title">
+                                    <a href="single.html"> Looking Logo Designer ($15 Budget) </a>
+                                    <span class="label label-info">Freelancer</span>
+                                </div>
+                            </div>
+                        </div><!-- end mini-widget -->
+                    </div><!-- end widget -->   
+                </div><!-- end col -->
+            </div><!-- end row -->
