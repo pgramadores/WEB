@@ -1,22 +1,35 @@
 angularRoutingApp.controller('DetalleTrabajoController', function($scope, $routeParams,$http,$uibModal,$rootScope,$sce,$location) {
 
-	$http.get('./models/TrabajosDetalle.php?IdTrabajo='+$routeParams.IdOferta)
+	$http.get('http://localhost:3000/ofertas/'+$routeParams.IdOferta)
     .success(function(data) {
         $scope.Contenido = data;
-        $scope.DescripcionGeneral =  $sce.trustAsHtml(data.DescripcionGeneral);
-        $scope.BeneficiosVentajas =  $sce.trustAsHtml(data.BeneficiosVentajas);
-        $scope.Requisitos =  $sce.trustAsHtml(data.Requisitos);
-        $scope.IdDetalle = $routeParams.IdOferta;
-        $scope.Detalle = $routeParams.Oferta;
+        $scope.DescripcionGeneral =  $sce.trustAsHtml(data.descripciongeneral);
+        $scope.BeneficiosVentajas =  $sce.trustAsHtml(data.beneficiosventajas);
+        $scope.Requisitos =  $sce.trustAsHtml(data.requisitos);
+        $scope.IdDetalle = $routeParams._id;
+        $scope.Detalle = $routeParams.oferta;
         $scope.Ubicacion = escape($location.absUrl());
-        $rootScope.Titulo = data.Cargo;
+        $rootScope.Titulo = data.cargo;
 
+		switch (data.tipocontrato) {
+			case 'Indefinido':
+				$scope.Label = 'label-danger';
+				break;
+			case 'Honorarios':
+				$scope.Label = 'label-primary';
+				break;
+			case 'Proyecto':
+				$scope.Label = 'label-success';
+				break;
+			default:
+				$scope.Label = 'label-info';
+		}
 
         $scope.CompartirFacebook = function () {
             console.log($location.absUrl());
             FB.ui({
                 method: 'feed',
-                name: data.Cargo,
+                name: data.cargo,
                 link: $location.absUrl(),
                 caption: 'Pro-Gramadores.org :: El poder del código',
                 description : data.DescShare,
@@ -27,7 +40,7 @@ angularRoutingApp.controller('DetalleTrabajoController', function($scope, $route
         };
     });
 
-	$scope.Postular = function($event,$IdTrabajo) {		
+	$scope.Postular = function($event,$IdTrabajo) {
         $http.post('./models/TrabajosPostular.php',{
             idTrabajo: $IdTrabajo,
         })
@@ -37,5 +50,5 @@ angularRoutingApp.controller('DetalleTrabajoController', function($scope, $route
         .error(function(data) {
                 console.log('Error: ' + data);
         });
-    } 
+    }
 });

@@ -7,21 +7,21 @@
                                 <div class="title-area text-center">
                                     <div class="bread">
                                         <ol class="breadcrumb">
-                                            <li><a href="#">Home</a></li>
-                                            <li class="">Jobs</li>
-                                            <li class="active">Single Job</li>
+                                            <li><a href="/">Inicio</a></li>
+                                            <li class=""><a href="./trabajos">laboral</a></li>
+                                            <li class="active">Detalle oferta</li>
                                         </ol>
                                     </div><!-- end bread -->
                                     <div class="colorfulcats">
-                                        <a href="#"><span class="label label-danger">Part Time</span></a>
+                                        <a href="#"><span class="label {{Label}}">{{Contenido.tipocontrato}}</span></a>
                                     </div>
-                                    <h3>{{ Contenido.Cargo }}</h3>
+                                    <h3>{{Contenido.cargo}}</h3>
                                     <div class="large-post-meta">
-                                        <span><a href="category.html"><i class="fa fa-clock-o"></i> 21 March 2016</a></span>
+                                        <span><a href="#"><i class="fa fa-clock-o"></i> {{Contenido.fechacreacion | date:'dd-MM-yyyy'}}</a></span>
                                         <small class="hidden-xs">&#124;</small>
-                                        <span class="hidden-xs"><a href="#"><i class="fa fa-map-marker"></i> New York / USA</a></span>
+                                        <span class="hidden-xs"><a href="#"><i class="fa fa-map-marker"></i> {{Contenido.pais}}</a></span>
                                         <small class="hidden-xs">&#124;</small>
-                                        <span class="hidden-xs"><a href="single.html"><i class="fa fa-briefcase"></i> Web Design</a></span>
+                                        <span class="hidden-xs"><a href="#"><i class="fa fa-briefcase"></i> {{Contenido.categoria}}</a></span>
                                     </div><!-- end meta -->
                                     <div class="post-sharing">
                                         <ul class="list-inline">
@@ -33,17 +33,16 @@
                                 </div><!-- /.pull-right -->
                                 <div class="job-media row">
                                     <div class="col-sm-5">
-                                        <img alt="" src="{{ Contenido.Imagen }}" class="img-responsive">
+                                        <img alt="" src="{{ Contenido.imagen }}" class="img-responsive">
                                     </div>
 
                                     <div class="col-sm-7 job-details">
                                         <h3>Detalle empleo</h3>
                                         <ul class="">
-                                            <li><strong><i class="fa fa-user"></i> Publicador :</strong> <a href="#"> {{ Contenido.Publicador }}</a></li>
-                                            <li><strong><i class="fa fa-briefcase"></i> Categoria :</strong> <a href="#"> {{ Contenido.Categoria }}</a></li>
-                                            <li><strong><i class="fa fa-dollar"></i> Sueldo :</strong> USD {{ Contenido.Sueldo }}</li>
-                                            <li><strong><i class="fa fa-clock-o"></i> Delivery Time :</strong> 5 Days</li>
-                                            <li><strong><i class="fa fa-cog"></i> Revision :</strong> 3 Times</li>
+                                            <li><strong><i class="fa fa-user"></i> Publicador :</strong> <a href="#"> {{ Contenido.publicador }}</a></li>
+                                            <li><strong><i class="fa fa-briefcase"></i> Categoria :</strong> <a href="#"> {{ Contenido.categoria }}</a></li>
+                                            <li><strong><i class="fa fa-dollar"></i> Sueldo :</strong> USD {{ Contenido.sueldo }}</li>
+                                            <li><strong><i class="fa fa-clock-o"></i> Último día postulación:</strong> {{Contenido.fechatermino | date:'dd-MM-yyyy'}}</li>
                                         </ul>
                                     </div>
                                 </div>
@@ -58,14 +57,6 @@
                                 <h3>Requisitos</h3>
                                 <hr>
                                 <div ng-bind-html="Requisitos"></div>
-                                <hr>
-                                <div class="post-sharing">
-                                    <ul class="list-inline">
-                                        <li><a href="#" class="fb-button btn btn-primary"><i class="fa fa-facebook"></i> <span class="hidden-xs">Share on Facebook</span></a></li>
-                                        <li><a href="#" class="tw-button btn btn-primary"><i class="fa fa-twitter"></i> <span class="hidden-xs">Tweet on Twitter</span></a></li>
-                                        <li><a href="#" class="gp-button btn btn-primary"><i class="fa fa-google-plus"></i></a></li>
-                                    </ul>
-                                </div><!-- end post-sharing -->
                                 <br>
                                 <br>
                                 <div class="row">
@@ -108,7 +99,7 @@
                                                     </div>
                                                 </form>
                                             </div><!-- end newsletter -->
-                                        </div><!-- end widget -->   
+                                        </div><!-- end widget -->
                                     </div><!-- end col -->
                                 </div><!-- end row -->
                             </div><!-- end post-desc -->
@@ -168,6 +159,6 @@
                                 </div>
                             </div>
                         </div><!-- end mini-widget -->
-                    </div><!-- end widget -->   
+                    </div><!-- end widget -->
                 </div><!-- end col -->
             </div><!-- end row -->

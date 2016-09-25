@@ -5,7 +5,7 @@ angularRoutingApp.controller('TrabajoController', function($scope,$http,$uibModa
 	$http.get('http://ipinfo.io/json')
 	.success(function(datos) {
 
-       $http.get('./models/TrabajosListar.php?Pais='+datos.country)
+       $http.get('http://localhost:3000/ofertasp/'+datos.country)
 	    .success(function(data) {
 
 	    	$scope.Spinner = "Ocultar";
@@ -22,19 +22,19 @@ angularRoutingApp.controller('TrabajoController', function($scope,$http,$uibModa
 		  	$scope.currentPage = 1;
 		  	$scope.numPerPage = 5;
 		  	$scope.maxSize = 5;
-	  	
-		  	$scope.makeTodos(); 
-		  
+
+		  	$scope.makeTodos();
+
 			$scope.numPages = function () {
 				return Math.ceil($scope.todos.length / $scope.numPerPage);
 			};
-		  
+
 		  	$scope.$watch('currentPage + numPerPage', function() {
 		    	var begin = (($scope.currentPage - 1) * $scope.numPerPage), end = begin + $scope.numPerPage;
 		    	$scope.filteredTodos = $scope.todos.slice(begin, end);
 		  	});
 
-		  	
+
 		  	$scope.totalItems = (data.length * 2);
 
 
@@ -45,13 +45,13 @@ angularRoutingApp.controller('TrabajoController', function($scope,$http,$uibModa
 			$scope.pageChanged = function() {
 				$log.log('Page changed to: ' + $scope.currentPage);
 			};
-		  
+
 	    });
 
    	});
 
-	
 
-		
+
+
 
 });
