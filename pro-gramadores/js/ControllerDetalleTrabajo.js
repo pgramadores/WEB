@@ -41,14 +41,26 @@ angularRoutingApp.controller('DetalleTrabajoController', function($scope, $route
     });
 
 	$scope.Postular = function($event,$IdTrabajo) {
-        $http.post('./models/TrabajosPostular.php',{
-            idTrabajo: $IdTrabajo,
-        })
-        .success(function(data) {
-        		angular.element($event.target).html('<i class="fa fa-check"></i> ' + data);
-            })
-        .error(function(data) {
-                console.log('Error: ' + data);
-        });
+
+		//angular.element($event.target).html('<i class="fa fa-check"></i> ' + data);
+
+		$http.put('http://localhost:3000/ofertasp/'+$routeParams.IdOferta, {
+			nombre:             $scope.txtNombrePostulante,
+			correo:         	$scope.txtCorreoPostulante,
+			telefono:          	$scope.txtTelefonoPostulante,
+			linkedin:           $scope.txtLinkedinPostulante,
+			portafolio:       	$scope.txtPortafolioPostulante,
+			experiencia: 		$scope.txtExperienciaPostulante,
+			cartapresentacion: 	$scope.txtCartaPresentacionPostulante
+		})
+		.success(function(data) {
+				console.log(data);
+			})
+		.error(function(data) {
+				console.log('Error: ' + data);
+		});
+
+
+
     }
 });
