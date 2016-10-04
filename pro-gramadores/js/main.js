@@ -34,9 +34,9 @@ angularRoutingApp.config(function($routeProvider, $locationProvider, MetaTagsPro
           controller: 'ForosdetController'
         })
         //Rutas de los foros
-        when('/detallesforos'{
+        .when('/detallesforos',{
             templateUrl :'views/detallesforos.html',
-            controller: 'ControllerDetallesForos'
+            controller: 'DetallesForosController'
         })
         //Fin Rutas foros
         .when('/error', {

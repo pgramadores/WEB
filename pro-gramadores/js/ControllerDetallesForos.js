@@ -1,4 +1,4 @@
-angularRoutingApp.controller('ForosdetController', function($scope,$rootScope) {
+angularRoutingApp.controller('DetallesForosController', function($scope,$rootScope) {
 
 	$rootScope.Titulo = "Prueba de Forosdet";
 });
