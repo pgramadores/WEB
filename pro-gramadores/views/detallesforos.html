@@ -1,1 +1,97 @@
-Aqui iria los topicos de cada foros cagado por parametros, solo los topicos
+<link rel="stylesheet" type="text/css" href="css/bbpress.css">
+
+<!--
+<section class="section bgg">
+    <div class="container">
+        <div class="title-area">
+            <h2>Comunidad y Foros <small class="hidden-xs">Aqui encontraras todo lo que buscas en Programacion..</small></h2>
+            <div class="bread">
+                <ol class="breadcrumb">
+                    <li><a href="./">Inicio</a></li>
+                    <li class="active">Comunidad</li>
+                </ol>
+            </div>
+        </div>
+
+    </div>
+
+</section>-->
+
+<div class="container sitecontainer bgw">
+    <div class="row">
+        <div class="col-md-12 m22 single-post">
+            <div class="widget">
+                <div class="large-widget m30">
+                    <div class="post-desc">
+                        <div id="bbpress-forums">
+                            <div class="table-responsive">
+                            <ul class="bbp-forums">
+                                <li class="bbp-header">
+                                    <ul class="forum-titles">
+                                        <li class="bbp-forum-info">PHP {{gerardo}}</li>
+                                        <li class="bbp-forum-topic-count">Topicos</li>
+                                        <li class="bbp-forum-reply-count">Posts</li>
+                                        <li class="bbp-forum-freshness">Freshness</li>
+                                    </ul>
+                                </li><!-- .bbp-header -->
+
+                                <li class="bbp-body" ng-repeat="cargad in cargatopicos">
+                                    <ul class="forum type-forum status-publish hentry loop-item-0 odd bbp-forum-status-open bbp-forum-visibility-publish">
+                                        <li class="bbp-forum-info">
+                                            <a class="bbp-forum-title" href="./forosdet/{{cargad.topico}}" title="General">{{cargad.topico}}</a>
+                                            <div class="bbp-forum-content">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</div>
+                                        </li>
+                                        <li class="bbp-forum-topic-count">{{cargad.cantidad}}</li>
+                                        <li class="bbp-forum-reply-count">{{cargad.publicaciones}}</li>
+                                        <li class="bbp-forum-freshness">
+                                            <a href="#" title="Reply To: Please NOTIFY YOUR CUSTOMERS of UPDATES">2 days, 7 hours ago</a>
+                                            <p class="bbp-topic-meta">
+                                                <span class="bbp-topic-freshness-author">
+                                                    <a href="#" title="View admin profile" class="bbp-author-avatar" rel="nofollow">
+                                                        <img alt="" src="http://0.gravatar.com/avatar/0d91c692acdcc514b006840d870dd4a6?s=14&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D14&amp;r=G" class="avatar" height="14" width="14" />
+                                                    </a>&nbsp;<a href="#" title="View admin profile" class="bbp-author-name" rel="nofollow">John DOE</a>
+                                                </span>
+                                            </p>
+                                        </li>
+                                    </ul><!-- end bbp forums -->
+                                 </li>
+
+                            </ul><!-- .forums-directory -->
+                            </div>
+                        </div> <!-- /bbpress -->
+
+                    </div>
+                    <!-- end post-desc -->
+                </div>
+                <!-- end large-widget -->
+            </div>
+            <!-- end widget -->
+
+            <!--
+            <div class="pagination-wrapper text-center">
+                <nav>
+                  <ul class="pagination">
+                    <li>
+                      <a href="#" aria-label="Previous">
+                        <span aria-hidden="true">&laquo;</span>
+                      </a>
+                    </li>
+                    <li><a href="#">1</a></li>
+                    <li><a href="#">2</a></li>
+                    <li><a href="#">3</a></li>
+                    <li><a href="#">4</a></li>
+                    <li><a href="#">5</a></li>
+                    <li>
+                      <a href="#" aria-label="Next">
+                        <span aria-hidden="true">&raquo;</span>
+                      </a>
+                    </li>
+                  </ul>
+                </nav>
+            </div>-->
+
+        </div>
+        <!-- end col -->
+    </div>
+    <!-- end row -->
+</div>
