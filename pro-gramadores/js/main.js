@@ -1,7 +1,12 @@
 // Creación del módulo
 var angularRoutingApp = angular.module('angularRoutingApp', ['ngRoute', 'ui.bootstrap', 'ngAnimate', 'ngSanitize', 'textAngular', 'ngImgCrop', 'metatags', 'angularjs-datetime-picker']);
 
-// // Configuración de las rutas
+// Configuración de las constantes
+angularRoutingApp.constant("env",{
+    "APIREST": "http://pro-gramadores.io:3000"
+});
+
+// Configuración de las rutas
 angularRoutingApp.config(function($routeProvider, $locationProvider, MetaTagsProvider) {
 
     $routeProvider
@@ -56,33 +61,4 @@ angularRoutingApp.config(function($routeProvider, $locationProvider, MetaTagsPro
         });
     }
 
-    MetaTagsProvider
-        .when('/', {
-            title: 'Inicio',
-            description: 'Cool',
-            fb_title: 'My title',
-            fb_site_name: 'My site name',
-            fb_url: 'www.blablabla.blabla',
-            fb_description: 'Cool website',
-            fb_type: 'Facebook type',
-            fb_image: 'an_image.jpg',
-            robots: 'index, follow',
-            keywords: 'some cool keywords'
-        })
-        .when('/detalleoferta/:IdOferta?/:Oferta?/', {
-            title: 'detalle de la oferta',
-            description: function(IdOferta, Oferta) {
-                return 'COOOOOOOL' + IdOferta + " Super " + Oferta;
-            },
-            robots: 'index, follow',
-            keywords: 'some cool keywords'
-        })
-        .otherwise({
-            title: 'otherwise',
-            description: 'Another great page'
-        });
-});
-
-angularRoutingApp.run(function(MetaTags) {
-    MetaTags.initialize();
 });
