@@ -8,54 +8,27 @@ El acceso a pruebas en desarrollo son a traves del sitio http://pgramadores.raic
 
 * Andres Rodriguez :: Inicio | Noticias
 * Juan Mora :: Trabajos | Contacto
-* Jonathan Veliz :: Foros
+* Gerardo Calfulef :: Foros
 * Sin Asignar :: Educación
-
-### Acceso a la base de datos ###
-
-Se recomienda como herramienta usar workbench para mysql.
-
-Las credenciales de acceso son:
-
-* Host   : raicerk.cl
-* User   : cra16464_pro-gra
-* Pass   : pro-gra
-* dbname : cra16464_pro-gramadores
 
 
 ### Uso de datos ###
 
-El nombre de las tablas de mysql esta definida con la siguiente lógica:
+El nombre de las colecciones de mongodb esta definida con la siguiente lógica:
 
-ModuloNombreTabla
+ModuloNombre
 
 Ejemplo:
 
-* UtilesPais
-* TrabajosTrabajos
-
-
-La aplicación la estamos desarrollando a través de procedimientos almacenados de mysql, la lógica de los nombres de los procedimientos par mantener el orden y entendimiento es el siguiente:
-
-spTipo_Modulo_DescripcionDeLoQueHace
-
-Definición de tipos:
-
-* spRec : Consulta(Select)
-* spMod : Actualización (Update)
-* spIns : Inserción (Insert)
-* spDel : Borrado (Delete)
-* spPro : Procedimientos que hagan mezclas de ins,rec,mod,del
-
-Ejemplos:
-
-* spRec_Trabajos_DetalleTrabajo
-* spRec_Trabajos_ConsultaTrabajosDisponibles
+* Ofertas
+* Foros
+* Noticias
+* Educacion
 
 
 ### Otros ###
 
-La versión de PHP debe ser 5.6 o superior.
+La versión de todos los modulos estan en su respectivo archivo package.json
 
 Las librerías de angular que se están usando en este proyecto están disponibles para ser incluidas en esta url, favor usar solo librerías de esta versión 1.5.3.
 
