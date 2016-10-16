@@ -1,11 +1,11 @@
-angularRoutingApp.controller('TrabajoController', function($scope,$http,$uibModal,$rootScope) {
+angularRoutingApp.controller('TrabajoController', function($scope,$http,$uibModal,$rootScope,env) {
 
 	$rootScope.Titulo = "Lista Ofertas Laborales";
 
 	$http.get('http://ipinfo.io/json')
 	.success(function(datos) {
 
-       $http.get('http://localhost:3000/ofertasp/'+datos.country)
+       $http.get(env.APIREST+'/ofertasp/'+datos.country)
 	    .success(function(data) {
 
 	    	$scope.Spinner = "Ocultar";

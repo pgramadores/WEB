@@ -1,4 +1,4 @@
-angularRoutingApp.controller('CreaTrabajoController', function($scope, $http, $rootScope) {
+angularRoutingApp.controller('CreaTrabajoController', function($scope, $http, $rootScope,env) {
 
     $rootScope.Titulo = "Crea Oferta Laboral";
 
@@ -10,7 +10,7 @@ angularRoutingApp.controller('CreaTrabajoController', function($scope, $http, $r
 	});
 
     $scope.CreaOferta = function() {
-        $http.post('http://localhost:3000/ofertas/', {
+        $http.post(env.APIREST+'/ofertas/', {
             cargo:              $scope.txtTituloOferta,
             publicador:         $scope.txtPublicador,
             categoria:          $scope.txtCategoria,

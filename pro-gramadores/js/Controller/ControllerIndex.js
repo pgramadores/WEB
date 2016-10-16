@@ -8,6 +8,6 @@ angularRoutingApp.controller('mainController', function($scope,$rootScope) {
             $scope.$tickerme = $('#ticker').tickerme();
         });
     };
-          
+
     $scope.initTickerMe();
 });

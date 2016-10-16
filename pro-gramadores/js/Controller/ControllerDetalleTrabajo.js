@@ -1,6 +1,6 @@
-angularRoutingApp.controller('DetalleTrabajoController', function($scope, $routeParams,$http,$uibModal,$rootScope,$sce,$location) {
+angularRoutingApp.controller('DetalleTrabajoController', function($scope, $routeParams,$http,$uibModal,$rootScope,$sce,$location,env) {
 
-	$http.get('http://localhost:3000/ofertas/'+$routeParams.IdOferta)
+	$http.get(env.APIREST+'/ofertas/'+$routeParams.IdOferta)
     .success(function(data) {
         $scope.Contenido = data;
         $scope.DescripcionGeneral =  $sce.trustAsHtml(data.descripciongeneral);
@@ -44,7 +44,7 @@ angularRoutingApp.controller('DetalleTrabajoController', function($scope, $route
 
 		//angular.element($event.target).html('<i class="fa fa-check"></i> ' + data);
 
-		$http.put('http://localhost:3000/ofertasp/'+$routeParams.IdOferta, {
+		$http.put(env.APIREST+'/ofertasp/'+$routeParams.IdOferta, {
 			nombre:             $scope.txtNombrePostulante,
 			correo:         	$scope.txtCorreoPostulante,
 			telefono:          	$scope.txtTelefonoPostulante,
