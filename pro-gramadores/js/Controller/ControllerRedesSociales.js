@@ -1,6 +1,6 @@
 angularRoutingApp.controller('RedesSocialesController', function($scope,$http) {
-	
-	$http.get('https://graph.facebook.com/v2.7/456860731019994?fields=fan_count&access_token=EAAIXiYjjEvkBAHbAD7B4UCCW5u0Mw1RpQJ5ici5TEtBkp0Y8m3jHMmSnJR4jO7vV4QJ5j4SISjRqetMkdKd7cIsJPXJw6hUxK5WYMDwExYKxm4PjuLJl42lxmFhvESJSkyPipsyRhnwf2mvb36bG4mYToAlyM95EQignugZDZD')
+
+	$http.get('https://graph.facebook.com/v2.7/456860731019994?fields=fan_count&access_token=EAAIXiYjjEvkBAKLpzH4aTyQITg9RpaI8c7vExQDO4wC4wpKHMXrs34efHiZArJXjd2paiiDCiRjyXTkBXoLtOBh4GBBZCosSmg5loa8QI7wKhnBz6BJ6KLTCtTZCqsxdof1qap56yxIsXJ7mipgPufhNHvOI0UpgYVk7djwkQZDZD')
     .success(function(data) {
         $scope.Facebook = data.fan_count;
     });
