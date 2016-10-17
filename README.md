@@ -25,6 +25,19 @@ Ejemplo:
 * Noticias
 * Educacion
 
+### Configuracion de acceso a las rutas ###
+
+Cambiar el acceso de AllowOverride none a AllowOverride All en el archivo de configuracion de apache o el en archivo de configuracion del sitio
+
+/etc/apache2/apache2.conf
+
+https://www.digitalocean.com/community/questions/htaccess-not-working-on-my-ubuntu-14-04-lamp-stack
+
+Ademas habilitar el modo de re-escritura de los directorios con directivas .htaccess
+
+https://www.dev-metal.com/enable-mod_rewrite-ubuntu-12-04-lts/
+
+
 
 ### Otros ###
 
