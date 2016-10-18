@@ -1,14 +1,25 @@
-angularRoutingApp.controller('TrabajoController', function($scope,$http,$uibModal,$rootScope,env) {
+angularRoutingApp.controller('TrabajoController', function($scope,$http,$uibModal,$rootScope,env,ngNotify) {
 
 	$rootScope.Titulo = "Lista Ofertas Laborales";
 
-	$http.get('http://ipinfo.io/json')
+	$http.jsonp('http://ipinfo.io/json?output=jsonp&callback=JSON_CALLBACK&username=pgramadores')
 	.success(function(datos) {
 
        $http.get(env.APIREST+'/ofertasp/'+datos.country)
 	    .success(function(data) {
 
 	    	$scope.Spinner = "Ocultar";
+
+			ngNotify.addTheme('pro-gramadores', 'pro-gramadores');
+			ngNotify.set('Mensaje del color de <i>youtube</i> :)', {
+			    position: 'top',
+			    sticky: false,
+				type: 'error',
+    			duration: 2000,
+				theme: 'pro-gramadores',
+    			html: true,
+				button: true
+			});
 
 	        $scope.contents = data;
 

@@ -1,9 +1,10 @@
 // Creación del módulo
-var angularRoutingApp = angular.module('angularRoutingApp', ['ngRoute', 'ui.bootstrap', 'ngAnimate', 'ngSanitize', 'textAngular', 'ngImgCrop', 'metatags', 'angularjs-datetime-picker']);
+var angularRoutingApp = angular.module('angularRoutingApp', ['ngRoute', 'ui.bootstrap', 'ngAnimate', 'ngSanitize', 'textAngular', 'ngImgCrop', 'metatags', 'angularjs-datetime-picker','ngNotify']);
 
 // Configuración de las constantes
 angularRoutingApp.constant("env",{
-    "APIREST": "http://pro-gramadores.io:3000"
+    "APIREST": "http://pro-gramadores.io:3000",
+    "DOMINIO": "http://pro-gramadores.io"
 });
 
 // Configuración de las rutas
