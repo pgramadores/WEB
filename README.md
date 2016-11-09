@@ -2,7 +2,7 @@
 
 Proyecto de pro-gramadores desarrollado en angular para la pagina de pro-gramadores.org
 
-El acceso a pruebas en desarrollo son a traves del sitio http://pgramadores.raicerk.cl donde se hacen los deploy del sistema cuando se aprueban cambios masivos como rama final
+Sitio desarrollado con AngularJS
 
 ### Distribución de tareas ####
 
@@ -51,7 +51,7 @@ Además todas las librerías deben ser incluidas en el index.html principal de l
 
 ### Errores o solicitudes ###
 
-Cualquier error que encuentren y deseen reportar háganlo a través de la herramienta de bitbucket, menú lateral->incidencias, así todos estaremos en conocimiento y se asignara a algunos de los participantes para su reparación
+Cualquier error que encuentren y deseen reportar háganlo a través de la herramienta de errores de github
 
 
 ### Recomendaciones ###
