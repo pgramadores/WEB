@@ -44,6 +44,10 @@ angularRoutingApp.config(function($routeProvider, $locationProvider, MetaTagsPro
             templateUrl :'views/detallesforos.html',
             controller: 'DetallesForosController'
         })
+        .when('/detalleperfil/:correo',{
+            templateUrl: 'views/detalleperfil.html',
+            controller: 'DetallePerfilController'
+        })
         //Fin Rutas foros
         .when('/error', {
             templateUrl: 'views/404.html',

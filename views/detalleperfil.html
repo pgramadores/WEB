@@ -1,0 +1,141 @@
+
+            <div class="row">
+                <div class="col-md-9 col-sm-9 col-xs-12 m22 single-post">
+                    <div class="widget">
+                        <div class="large-widget m30">
+                            <div class="post clearfix">
+                                <div class="title-area text-center">
+                                    <div class="bread">
+                                        <ol class="breadcrumb">
+                                            <li><a href="/">Inicio</a></li>
+                                            <li class=""><a href="./perfiles">perfiles</a></li>
+                                            <li class="active">Detalle perfil</li>
+                                        </ol>
+                                    </div><!-- end bread -->
+                                    <h3>{{Perfil.nombres}}</h3>
+                                    <a href="mailto:{{Perfil.correo}}"> {{ Perfil.correo }}</a>
+                                    
+
+                                </div><!-- /.pull-right -->
+                                <div class="job-media row">
+                                    <div class="col-sm-5">
+                                        <div ng-if="Perfil.foto != null">
+                                            <img alt="" src="{{ Perfil.foto }}" class="img-responsive">
+                                        </div>
+                                        <div ng-if="Perfil.foto == null">
+                                            <img alt="" src="/images/perfiles/default.jpg" class="img-responsive">
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-7 job-details">
+                                        
+                                        <!-- biografía -->
+                                        <h3>Descripción</h3>
+                                        <div ng-if="Perfil.bio != null">
+                                                <p>{{Perfil.bio}}</p>
+                                        </div>
+                                        <div ng-if="Perfil.bio == null">
+                                                <p>¡Esta persona todavía no ha escrito una biografía!</p>
+                                        </div>
+
+                                        <!-- redes sociales -->
+                                        <div ng-if="Redessociales != null">
+                                            <h3>Redes Sociales</h3>
+                                            <ul ng-repeat="red in Redessociales">
+                                                <i class="fa {{red.icono}}"></i>
+                                                <a href="//{{red.link}}">{{red.nombre}}</a> 
+                                            </ul>
+                                        </div>
+                                        <h3>Experiencias Laborales</h3>
+                                        <div ng-if="Experiencias != null">
+                                            <ul ng-repeat="experiencia in Experiencias">
+                                                <h4>{{experiencia.nombreempresa}}</h4>
+                                                <p><strong>Cargo:&nbsp</strong>{{experiencia.cargo}} <br>
+                                                <strong>Descripción:</strong>
+                                                {{experiencia.descripcion}}<br>
+                                                <strong>Desde:&nbsp</strong>{{experiencia.desde | date:'dd/MM/yyyy'}}&nbsp<strong>Hasta:&nbsp</strong>{{experiencia.hasta | date:'dd/MM/yyyy'}}</p>
+                                                <hr>
+                                            </ul>
+                                        </div>
+                                        <div ng-if="Aptitudes != null">
+                                            <h3>Ha participado en las siguientes actividades</h3>
+                                            <ul ng-repeat="aptitud in Aptitudes">
+                                                <h4>{{aptitud.nombre}}</h4>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="text-center">
+                                    <div class="large-post-meta">
+                                            <span class="hidden-xs"><a href="#"><i class="fa fa-map-marker"></i> {{Perfil.nacionalidad}}</a></span>
+                                    </div><!-- end meta -->
+
+                                    <div class="post-sharing">
+                                        <ul class="list-inline">
+                                            <li><a target="_blank" ng-click="CompartirFacebook()" href="javascript:void(0);" class="fb-button btn btn-primary"><i class="fa fa-facebook"></i> <span class="hidden-xs">Compartir en Facebook</span></a></li>
+                                            <li><a target="_blank" href="https://twitter.com/home?status={{Ubicacion}}" class="tw-button btn btn-primary"><i class="fa fa-twitter"></i> <span class="hidden-xs">Twittear en Twitter</span></a></li>
+                                            <li><a target="_blank" href="https://plus.google.com/share?url={{Ubicacion}}" class="gp-button btn btn-primary"><i class="fa fa-google-plus"></i> <span class="hidden-xs">Compartir en Google Plus</span></a></li>
+                                        </ul>
+                                    </div><!-- end post-sharing -->
+                                </div>
+
+                            </div><!-- end post -->
+                        </div><!-- end large-widget -->
+                    </div><!-- end widget -->
+                </div><!-- end col -->
+                <div class="col-md-3 col-sm-3 col-xs-12">
+                    <div ng-include="'views/redesypublicidad.html'"></div>
+                    <div class="widget">
+                        <div class="widget-title">
+                            <h4>Carrier</h4>
+                            <hr>
+                        </div><!-- end widget-title -->
+                        <div class="mini-widget carrier-widget m30">
+                            <div class="post clearfix">
+                                <div class="mini-widget-thumb">
+                                    <a href="single.html">
+                                        <img alt="" src="upload/carrer_01.jpg" class="img-responsive">
+                                    </a>
+                                </div>
+                                <div class="mini-widget-title">
+                                    <a href="single.html"> We are looking a team member</a>
+                                    <span class="label label-primary">Full time</span>
+                                </div>
+                            </div>
+                            <div class="post clearfix">
+                                <div class="mini-widget-thumb">
+                                    <a href="single.html">
+                                        <img alt="" src="upload/carrer_02.jpg" class="img-responsive">
+                                    </a>
+                                </div>
+                                <div class="mini-widget-title">
+                                    <a href="single.html"> Looking for support members (15-25 mails)</a>
+                                    <span class="label label-danger">Part time</span>
+                                </div>
+                            </div>
+                            <div class="post clearfix">
+                                <div class="mini-widget-thumb">
+                                    <a href="single.html">
+                                        <img alt="" src="upload/carrer_03.jpg" class="img-responsive">
+                                    </a>
+                                </div>
+                                <div class="mini-widget-title">
+                                    <a href="single.html"> Who fix my PHP problem?</a>
+                                    <span class="label label-info">Freelancer</span>
+                                </div>
+                            </div>
+                            <div class="post clearfix">
+                                <div class="mini-widget-thumb">
+                                    <a href="single.html">
+                                        <img alt="" src="upload/carrer_04.jpg" class="img-responsive">
+                                    </a>
+                                </div>
+                                <div class="mini-widget-title">
+                                    <a href="single.html"> Looking Logo Designer ($15 Budget) </a>
+                                    <span class="label label-info">Freelancer</span>
+                                </div>
+                            </div>
+                        </div><!-- end mini-widget -->
+                    </div><!-- end widget -->
+                </div><!-- end col -->
+            </div><!-- end row -->
