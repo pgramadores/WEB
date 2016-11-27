@@ -25,5 +25,5 @@ angularRoutingApp.controller('DetallePerfilController', function($scope,$rootSco
         $scope.Aptitudes = data.aptitudes;
     });
     if(!exito)
-        window.location.href = "correoInvalido";
+        window.location.href = "correoinvalido";
 });
