@@ -490,9 +490,9 @@
                                         <li>
                                             <div id="custom-search-input">
                                                 <div class="input-group col-md-12">
-                                                    <input type="text" class="form-control input-lg" placeholder="Busca aqui..." />
+                                                    <input id="txtcorreo" value="" type="text" class="form-control input-lg" placeholder="Busca aqui..." />
                                                     <span class="input-group-btn">
-                                                        <button class="btn btn-primary btn-lg" type="button">
+                                                        <button onclick="buscar();" class="btn btn-primary btn-lg" type="button">
                                                             <i class="fa fa-search"></i>
                                                         </button>
                                                     </span>
@@ -662,6 +662,14 @@
     <script src="/js/Library/jquery.min.js"></script>
     <script src="/js/Library/bootstrap.js"></script>
     <script src="/js/Library/plugins.js"></script>
+    <script>
+        function buscar(){
+
+            var correo = document.getElementById("txtcorreo").value;
+            if(correo != "")
+                window.location.href = "detalleperfil/"+correo;
+        }
+    </script>
 
 </body>
 
