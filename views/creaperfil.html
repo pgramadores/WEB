@@ -18,41 +18,45 @@
                                             <div id="appljpob" class="commentform">
                                                 <form class="row">
                                                     <div class="col-md-12">
-                                                        <div class="col-md-12">
+                                                        <div class="col-md-6">
                                                             <label>Nombre completo: <span class="required">*</span></label>
-                                                            <input type="text" ng-model="txtNombres" class="form-control">
+                                                            <input type="text" ng-model="perfil.nombrecompleto" class="form-control" required="required">
                                                         </div>
-                                                        <div class="col-md-12">
+                                                        <div class="col-md-6">
                                                             <label>Correo: <span class="required">*</span></label>
-                                                            <input type="email" ng-model="txtEmail" class="form-control">
+                                                            <input type="email" ng-model="perfil.correo" class="form-control" required="required">
                                                         </div>
-                                                        <div class="col-md-12">
+                                                        <div class="col-md-6">
                                                             <label>Contraseña: <span class="required">*</span></label>
-                                                            <input type="password" ng-model="txtContrasena" class="form-control">
+                                                            <input type="password" ng-model="perfil.contrasena" class="form-control" required="required">
                                                         </div>
-                                                        <div class="col-md-12">
+                                                        <div class="col-md-6">
                                                             <label>Repita Contraseña: <span class="required">*</span></label>
-                                                            <input type="password" ng-model="txtReContrasena" class="form-control">
+                                                            <input type="password" ng-model="reContrasena" class="form-control" required="required">
                                                         </div>
-                                                        <div class="col-md-12" ng-repeat="red in Redessociales">
-                                                            <div class="input-group">
-                                                                <div class="input-group-addon"><i class="fa {{red.icono}}"></i></div>
-                                                                <input class="form-control txtRedsocial" type="text" placeholder="Link">
-                                                            </div>
-                                                        </div>
-
                                                         <div class="col-md-12">
-                                                            <label>Seleccione una imáxgen</label>
+                                                            <label for="residencia" >País de residencia actual: </label>
+                                                            <select name="residencia" class="custom-select" ng-model="perfil.nacionalidad" required="required" ng-options="option.alpha2Code as option.translations.es for option in Paises">
+                                                                <option style="display:none" value="">País</option>
+                                                            </select>
+                                                        </div>
+                                                        <div class="col-md-12">
+                                                            <label>Selecciona una imágen de perfil: </label>
 															<div><input type="file" id="fileInput" /></div>
 															<div class="cropArea">
-																<img-crop image="myImage" result-image="myCroppedImage" result-image-size="600" area-type="square"></img-crop>
+																<img-crop image="myImage" result-image="perfil.foto" result-image-size="600" area-type="square"></img-crop>
 															</div>
                                                         </div>
                                                         <div class="col-md-12">
-                                                            <label>Cuéntanos un poco de tí</span></label>
+                                                            <label>Cuéntanos un poco de tí: </span></label>
                                                             <div class="lighter micontenedor">
-                                                                <div text-angular ng-model="txtBio" name="editorRequisitos" ta-text-editor-class="border-around" ta-html-editor-class="border-around"></div>
+                                                                <div text-angular ng-model="perfil.bio" name="editorRequisitos" ta-text-editor-class="border-around" ta-html-editor-class="border-around"></div>
                                                             </div>
+                                                        </div>
+                                                        <div class="col-md-2 col-md-offset-10">
+                                                            <button class="btn btn-primary btn-block" ng-click="registrar()">
+                                                                Registrar
+                                                            </button>
                                                         </div>
                                                     </div>                                                        
                                                 </form>
