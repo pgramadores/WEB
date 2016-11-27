@@ -26,4 +26,5 @@ angularRoutingApp.controller('DetallePerfilController', function($scope,$rootSco
     });
     if(!exito)
         window.location.href = "correoinvalido";
+    console.log(exito);
 });
