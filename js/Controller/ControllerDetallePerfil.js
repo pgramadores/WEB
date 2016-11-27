@@ -25,4 +25,10 @@ angularRoutingApp.controller('DetallePerfilController', function($scope,$rootSco
         $scope.Experiencias= data.experiencias;
         $scope.Aptitudes = data.aptitudes;
     });
+<<<<<<< HEAD
+=======
+    if(!exito)
+        window.location.href = "correoinvalido";
+    console.log(exito);
+>>>>>>> 3ae44b84059f5e66af1530d5fd141f3245cf7ed3
 });
