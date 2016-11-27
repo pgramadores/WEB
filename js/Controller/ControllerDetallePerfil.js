@@ -8,12 +8,10 @@ angularRoutingApp.controller('DetallePerfilController', function($scope,$rootSco
         redessociales   : [
             {
                 "icono"   : "fa-twitter",
-                "nombre"  : "Twitter",
                 "link"    : "www.twitter.com"
             },
             {
                 "icono"   : "fa-facebook",
-                "nombre"  : "Facebook",
                 "link"    : "www.facebook.com"
             }
         ],
