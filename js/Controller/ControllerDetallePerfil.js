@@ -1,7 +1,9 @@
-angularRoutingApp.controller('DetallePerfilController', function($scope,$rootScope,$routeParams,$location, env) {
+angularRoutingApp.controller('DetallePerfilController', function($scope,$rootScope,$routeParams,$location, env, http) {
 
+    var exito = false;
     $http.get(env.APIREST+'/perfil/'+$routeParams.correo)
     .success(function(data) {
+        exito = true;
         $rootScope.Titulo = "Perfil de " + data.nombres;
         $scope.Ubicacion = escape($location.absUrl());
         $scope.CompartirFacebook = function () {
@@ -22,4 +24,6 @@ angularRoutingApp.controller('DetallePerfilController', function($scope,$rootSco
         $scope.Experiencias= data.experiencias;
         $scope.Aptitudes = data.aptitudes;
     });
+    if(!exito)
+        window.location.href = "correoInvalido";
 });
