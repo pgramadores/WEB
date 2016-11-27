@@ -1,36 +1,64 @@
-angularRoutingApp.controller('CreaPerfilController', function($scope,$rootScope) {
-    $http.jsonp('https://restcountries.eu/rest/v1/all').success(function(datos){
-        $scope.Paises = data;
-        $scope.Redessociales = [
+angularRoutingApp.controller('CreaPerfilController', function($scope,$rootScope,$http,env) {
+    
+    $scope.myImage='';
+    $scope.myCroppedImage='';
+
+    var modelExperiencia = [
             {
-                icono  : "fa-facebook-official",
-                nombre : "Facebook",
+                nombreempresa   : "",
+                cargo           : "",
+                desde           : "",
+                hasta           : "",
+                descripcion     : ""
+            }
+    ];
+
+    var agregarExperiencia = function(experiencia){
+        
+    }
+
+    $scope.Experiencias = [];
+
+    var handleFileSelect=function(evt) {
+        var file=evt.currentTarget.files[0];
+        var reader = new FileReader();
+        reader.onload = function (evt) {
+            $scope.$apply(function($scope){
+                $scope.myImage=evt.target.result;
+            });
+        };
+        reader.readAsDataURL(file);
+    };
+    angular.element(document.querySelector('#fileInput')).on('change',handleFileSelect);
+
+    $http.get('https://restcountries.eu/rest/v1/all').success(function(data){
+        $scope.Paises = data;        
+    });
+    
+    $scope.Redessociales = [
+            {
+                valor  : '&#xf230;',
+                icono  : "fa-facebook-official"
             },
             {
-                icono  : "fa-twitter",
-                nombre : "Twitter"
+                valor  : '&#xf099',
+                icono  : "fa-twitter"
             },
             {
-                icono  : "fa-linkedin-square",
-                nombre : "Linkedin"
+                valor  : '&#xf08c',
+                icono  : "fa-linkedin-square"
             },
             {
-                icono  : "fa-github",
-                nombre : "Github"
+                valor  : '&#xf09b;',
+                icono  : "fa-github"
             },
             {
-                icono  : "fa-gitlab",
-                nombre : "GitLab"
+                valor  : '&#xf0d5;',
+                icono  : "fa-google-plus"    
             },
             {
-                icono  : "fa-google-plus",
-                nombre : "Google +"     
-            },
-            {
-                icono  : "fa-comments-o",
-                nombre : "Otro"
+                valor  : '&#xf0e6',
+                icono  : "fa-comments-o"
             }
         ];
-        
-    });
 });

@@ -15,23 +15,23 @@ angularRoutingApp.controller('DetallesForosController', function($scope,$rootSco
 		switch($routeParams.TipoForo) {
 	    case 'php':
 		$scope.cargatopicos = [
-				{topico:"PHPWEB",cantidad:26,publicaciones:5},
-				{topico:"PHPFRAMEWORK",cantidad:30,publicaciones:100},
+				{topico:"php",cantidad:26,publicaciones:5},
+				{topico:"php framework",cantidad:30,publicaciones:100},
 				{topico:"PHPZEND",cantidad:27,publicaciones:25}
 			];
 	        break;
 	    case 'java':
 		$scope.cargatopicos = [
-				{topico:"JAVA WEB",cantidad:26,publicaciones:5},
-				{topico:"JAVAEE",cantidad:30,publicaciones:100},
-				{topico:"JAVADESKTOK",cantidad:27,publicaciones:25}
+				{topico:"jsp",cantidad:26,publicaciones:5},
+				{topico:"java EE",cantidad:30,publicaciones:100},
+				{topico:"java desktop",cantidad:27,publicaciones:25}
 			];
 	        break;
 		case 'net':
 		$scope.cargatopicos = [
 				{topico:"C#",cantidad:26,publicaciones:5},
 				{topico:"Visual Basic",cantidad:30,publicaciones:100},
-				{topico:"C# Web",cantidad:27,publicaciones:25}
+				{topico:"asp",cantidad:27,publicaciones:25}
 			];
 			break;
 	}

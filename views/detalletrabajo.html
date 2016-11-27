@@ -95,7 +95,8 @@
                                                     <textarea class="form-control" placeholder="" ng-model="txtCartaPresentacionPostulante"></textarea>
                                                 </div>
                                                     <div class="col-md-12 col-sm-12">
-                                                        <input type="button" value="Postular" class="btn btn-primary" ng-click="Postular($event,Contenido.idTrabajos)"/>
+                                                        <input type="button" value="Postular" class="btn btn-primary" ng-click="Postular($event,Contenido.idTrabajos)" ng-confirm="¿Está seguro que desea postular a esta oferta laboral?"/>
+                                                        <span>Su postulación se esta realizando en "{{PaisActual}}" para una oferta de "{{Contenido.pais}}"</span>
                                                     </div>
                                                 </form>
                                             </div><!-- end newsletter -->

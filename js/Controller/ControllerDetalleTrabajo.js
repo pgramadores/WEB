@@ -1,4 +1,9 @@
-angularRoutingApp.controller('DetalleTrabajoController', function($scope, $routeParams,$http,$uibModal,$rootScope,$sce,$location,env) {
+angularRoutingApp.controller('DetalleTrabajoController', function($scope, $routeParams,$http,$uibModal,$rootScope,$sce,$location,env,ngNotify) {
+
+	$http.jsonp('http://ipinfo.io/json?output=jsonp&callback=JSON_CALLBACK&username=pgramadores')
+	.success(function(datos) {
+		$scope.PaisActual = datos.city+','+datos.country;
+	});
 
 	$http.get(env.APIREST+'/ofertas/'+$routeParams.IdOferta)
     .success(function(data) {
@@ -54,10 +59,30 @@ angularRoutingApp.controller('DetalleTrabajoController', function($scope, $route
 			cartapresentacion: 	$scope.txtCartaPresentacionPostulante
 		})
 		.success(function(data) {
-				console.log(data);
-			})
+
+			console.log(data);
+
+			ngNotify.addTheme('pro-gramadores', 'pro-gramadores');
+			ngNotify.set('<i class="fa fa-check"></i> Postulación a oferta realizada correctamente, recibiras un mail de copia de la postulación realizada.', {
+			    position: 'top',
+			    sticky: false,
+				type: 'success',
+    			duration: 5000,
+				theme: 'pro-gramadores',
+    			html: true,
+				button: true
+			});
+
+			$scope.txtNombrePostulante = "";
+			$scope.txtCorreoPostulante = "";
+			$scope.txtTelefonoPostulante = "";
+			$scope.txtLinkedinPostulante = "";
+			$scope.txtPortafolioPostulante = "";
+			$scope.txtExperienciaPostulante = "";
+			$scope.txtCartaPresentacionPostulante = "";
+		})
 		.error(function(data) {
-				console.log('Error: ' + data);
+			console.log('Error: ' + data);
 		});
 
 

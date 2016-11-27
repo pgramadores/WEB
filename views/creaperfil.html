@@ -18,18 +18,43 @@
                                             <div id="appljpob" class="commentform">
                                                 <form class="row">
                                                     <div class="col-md-12">
-                                                        <label>Nombre completo: <span class="required">*</span></label>
-                                                        <input type="text" ng-model="txtNombres" class="form-control">
-                                                        <label>Correo: <span class="required">*</span></label>
-                                                        <input type="email" ng-model="txtEmail" class="form-control">
-                                                        <label>Contraseña: <span class="required">*</span></label>
-                                                        <input type="password" ng-model="txtContrasena" class="form-control">
-                                                        <label>Repita Contraseña: <span class="required">*</span></label>
-                                                        <input type="password" ng-model="txtReContrasena" class="form-control">
-                                                        <label>Foto de Perfil: </label>
-                                                        <input type="file" ng-model="imgImagen" class="form-control">
-                                                        <textarea ng-model="txtBio"></textarea>
-                                                    </div>
+                                                        <div class="col-md-12">
+                                                            <label>Nombre completo: <span class="required">*</span></label>
+                                                            <input type="text" ng-model="txtNombres" class="form-control">
+                                                        </div>
+                                                        <div class="col-md-12">
+                                                            <label>Correo: <span class="required">*</span></label>
+                                                            <input type="email" ng-model="txtEmail" class="form-control">
+                                                        </div>
+                                                        <div class="col-md-12">
+                                                            <label>Contraseña: <span class="required">*</span></label>
+                                                            <input type="password" ng-model="txtContrasena" class="form-control">
+                                                        </div>
+                                                        <div class="col-md-12">
+                                                            <label>Repita Contraseña: <span class="required">*</span></label>
+                                                            <input type="password" ng-model="txtReContrasena" class="form-control">
+                                                        </div>
+                                                        <div class="col-md-12" ng-repeat="red in Redessociales">
+                                                            <div class="input-group">
+                                                                <div class="input-group-addon"><i class="fa {{red.icono}}"></i></div>
+                                                                <input class="form-control txtRedsocial" type="text" placeholder="Link">
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="col-md-12">
+                                                            <label>Seleccione una imáxgen</label>
+															<div><input type="file" id="fileInput" /></div>
+															<div class="cropArea">
+																<img-crop image="myImage" result-image="myCroppedImage" result-image-size="600" area-type="square"></img-crop>
+															</div>
+                                                        </div>
+                                                        <div class="col-md-12">
+                                                            <label>Cuéntanos un poco de tí</span></label>
+                                                            <div class="lighter micontenedor">
+                                                                <div text-angular ng-model="txtBio" name="editorRequisitos" ta-text-editor-class="border-around" ta-html-editor-class="border-around"></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>                                                        
                                                 </form>
                                             </div>
                                         </div>
@@ -40,3 +65,23 @@
                     </div>
                 </div>
 			</div>
+
+            <div class="modal fade">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                        </button>
+                        <h4 class="modal-title">Modal title</h4>
+                    </div>
+                    <div class="modal-body">
+                        <p>One fine body&hellip;</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Save changes</button>
+                    </div>
+                    </div><!-- /.modal-content -->
+                </div><!-- /.modal-dialog -->
+            </div><!-- /.modal -->
