@@ -45,18 +45,18 @@
                                         </div>
 
                                         <!-- redes sociales -->
-                                        <div ng-if="Redessociales != null">
+                                        <div ng-if="Perfil.redessociales.length != 0">
                                             <div class="RedesSociales">
                                                 <h3>Redes Sociales</h3>
-                                                <ul ng-repeat="red in Redessociales">
+                                                <ul ng-repeat="red in Perfil.redessociales">
                                                     <i class="fa {{red.icono}}"></i>
                                                     <a href="//{{red.link}}">{{red.link}}</a>
                                                 </ul>
                                             </div>
                                         </div>
-                                        <h3>Experiencias Laborales</h3>
-                                        <div ng-if="Experiencias != null">
-                                            <ul ng-repeat="experiencia in Experiencias">
+                                        <div ng-if="Perfil.experiencias.length != 0">
+                                            <h3>Experiencias Laborales</h3>
+                                            <ul ng-repeat="experiencia in Perfil.experiencias">
                                                 <h4>{{experiencia.nombreempresa}}</h4>
                                                 <p>
                                                     <strong>Cargo:&nbsp</strong>{{experiencia.cargo}} <br>
@@ -67,9 +67,9 @@
                                                 <hr>
                                             </ul>
                                         </div>
-                                        <div ng-if="Aptitudes != null">
+                                        <div ng-if="Perfil.aptitudes.length != 0">
                                             <strong><h3>Ha participado en las siguientes actividades</h3></strong>
-                                            <ul ng-repeat="aptitud in Aptitudes">
+                                            <ul ng-repeat="aptitud in Perfil.aptitudes">
                                                 <li>
                                                     <h4>{{aptitud.nombre}}</h4>
                                                     <p>

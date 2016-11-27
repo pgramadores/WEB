@@ -21,11 +21,5 @@ angularRoutingApp.controller('DetallePerfilController', function($scope,$rootSco
             });
         };
         $scope.Perfil = data; 
-        $scope.Redessociales = data.redessociales;
-        $scope.Experiencias= data.experiencias;
-        $scope.Aptitudes = data.aptitudes;
     });
-    if(!exito)
-        window.location.href = "correoinvalido";
-    console.log(exito);
 });
