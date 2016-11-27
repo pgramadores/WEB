@@ -52,7 +52,10 @@ angularRoutingApp.config(function($routeProvider, $locationProvider, MetaTagsPro
             templateUrl: 'views/creaperfil.html',
             controller: 'CreaPerfilController'
         })
-        //Fin Rutas foros
+        .when('/correoinvalido',{
+            templateUrl: 'views/correoinvalido.html',
+            controller: 'ControllerCorreoInvalido'
+        })
         .when('/error', {
             templateUrl: 'views/404.html',
             controller: 'error'
